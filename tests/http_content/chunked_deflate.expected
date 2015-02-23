@@ -1,0 +1,4189 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>Weather Forecast & Reports - Long Range & Local | Wunderground | Weather Underground</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="Weather Underground provides local & long range Weather Forecast, weather reports, maps & tropical weather conditions for locations worldwide." />
+		<meta name="keywords" content="Weather, Weather Underground, Weather Forecast & Reports - Long Range & Local | Wunderground, forecasts, current conditions, rain, snow, hurricane, tornado, storm, thunderstorm, tropical storm, wundermap, ski conditions, ski report, surfing, marine, aviation, photographs, photos, severe weather" />
+	<meta name="apple-itunes-app" content="app-id=955957721" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="fb-app-id" content="325331260891611" />
+<meta name="fb-channel-url" content="//Wunderground.com/php/lib/fb_sdk/channel.php" />
+<meta name="wui-member-logged-in" content="false" />
+<!-- MR	= 330 -->
+		<meta http-equiv="Refresh" content="330;URL=/?MR=1" />
+	<link rel="apple-touch-icon" href="/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="//icons.wxug.com/favicon.png"/>
+		<link rel="stylesheet" href="//style.wxug.com/css/wu4/core.css?v=2015010501">
+		<link rel="stylesheet" href="//style.wxug.com/css/wu4/omnibus.css?v=2015021701">
+	<script src="//icons.wxug.com/scripts/modernizr/2.8.2/modernizr.min.js"></script>
+	</head>
+	<body class="standard not-set  ">
+		<div id="content-wrap">
+		<nav class="topbar">
+	<div id="global-header" class="new-wu">
+		<a href="javascript:void(0);" id="sidebarButton" class="left-off-canvas-toggle"><i class="fi-list"></i></a>
+		<a href="/" id="header-logo" class="logo" title="Weather Underground"></a>
+		<nav id="feature-menu-mobile" class="sidebar">
+  <div class="sidebar-wrapper">
+  <ul class="side-main-nav nav-bar">
+		<li class="gotMore">
+		<a href="javascript:void(0);" class="maps">Maps & Radar</a>
+		<ul class="sideSubNav">
+		<li class="sideGoBack"><a href="javascript:void(0);">Maps & Radar</a></li>
+		<li><a href="/weather-radar/" title="Radar Maps">Radar Maps</a></li>
+		<li><a href="/wundermap/?units=english&rad=1&rad.num=1&rad.spd=25&rad.opa=81&rad.type=00Q&rad.type2=&rad.smo=1&rad.stm=0&sat=0&stormreports=0&svr=0&pix=0&cams=0&tor=0&riv=0&wxsn=0&ski=0&tfk=0&mm=0&ndfd=0&fire=0&firewfas=0&extremes=0&hurrevac=0&sst=0&livesurge=0&femaflood=0&tsunami=0&seismicrisk=0&fault=0&fissures=0&fronts=0&dir=1&dir.mode=driving&hur=0" title="Interactive Radar">Interactive Radar</a></li>
+		<li><a href="/wundermap/?zoom=5&type=&tl.play=0&tl.spd=2&extremes=0&fault=0&femaflood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=0&dir=1&dir.mode=driving&sst=0&sat=1&sat.num=1&sat.spd=25&sat.opa=87&sat.gtt1=108&sat.gtt2=108&sat.type=IR4&seismicrisk=0&svr=0&ski=0&snowfall=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=0&cams=0&pix=0" title="Interactive Satellite">Interactive Satellite</a></li>
+		<li><a href="/wundermap/" title="WunderMap">WunderMap</a></li>
+		<li><a href="/maps/" title="Current Conditions Maps">Current Conditions Maps</a></li>
+		<li><a href="/ndfdimage/viewimage/" title="Forecast Maps">Forecast Maps</a></li>
+		<li><a href="/maps/catalog/" title="All Maps Catalog">Maps Catalog</a></li>
+		</ul>
+		</li>
+		<li class="gotMore">
+		<a href="javascript:void(0);" class="severe">Severe Weather</a>
+		<ul class="sideSubNav">
+		<li class="sideGoBack"><a href="javascript:void(0);">Severe Weather</a></li>
+		<li><a href="/severe.asp" title="U.S. Severe Weather Map">U.S. Severe Weather Map</a></li>
+		<li><a href="/severe/europe.asp" title="Europe Severe Weather Map">Europe Severe Weather Map</a></li>
+		<li><a href="/hurricane/" title="Hurricane &amp; Tropical Cyclones">Hurricane &amp; Tropical Cyclones</a></li>
+		<li><a href="/severeconvective.asp" title="Convective Outlook">Convective Outlook</a></li>
+		<li class="hide"><a href="/tornado/" title="Tornadoes">Tornadoes</a></li>
+		<li class="hide"><a href="/winter-storm/" title="Winter Storms">Winter Storms</a></li>
+		<li><a href="/fire/" title="Wildfires">Wildfires</a></li>
+		<li><a href="/prepare/" title="Preparedness">Preparedness</a></li>
+		<li><a href="/email/emailsettings.asp" title="Weather Alerts">Weather Alerts</a></li>
+		</ul>
+		</li>
+		<li class="gotMore">
+		<a href="javascript:void(0);" class="news">News &amp; Blogs</a>
+		<ul class="sideSubNav">
+		<li class="sideGoBack"><a href="javascript:void(0);">News &amp; Blogs</a></li>
+		<li><a href="/blog/JeffMasters/show.html" title="Dr. Jeff Masters">Dr. Jeff Masters</a></li>
+		<li><a href="/blog/" title="All Weather Blogs">All Weather Blogs</a></li>
+		<li><a href="/news/" title="Recent News Stories">Recent News Stories</a></li>
+		<li><a href="/weather-infographics/" title="Weather Infographics">Weather Infographics</a></li>
+		<li><a href="/weather-posters/" title="Weather Posters">Weather Posters</a></li>
+		</ul>
+		</li>
+		<li class="gotMore">
+		<a href="javascript:void(0);" class="photos">Photos &amp; Video</a>
+		<ul class="sideSubNav">
+		<li class="sideGoBack"><a href="javascript:void(0);">Photos &amp; Video</a></li>
+		<li><a href="/wximage/" title="WunderPhotos">WunderPhotos</a></li>
+		<li><a href="/webcams/" title="Webcams">Webcams</a></li>
+		<li><a href="/video/" title="Videos">Videos</a></li>
+		</ul>
+		</li>
+		<li>
+		<a href="/history/" class="history" title="Historical Weather">Historical Weather</a>
+		</li>
+		<li>
+		<a href="/climate/" class="climate" title="Climate Change">Climate Change</a>
+		</li>
+		<li class="gotMore">
+		<a href="javascript:void(0);" class="activities">Activities</a>
+		<ul class="sideSubNav">
+		<li class="sideGoBack"><a href="javascript:void(0);">Activities</a></li>
+		<li><a href="/ski/" title="Ski &amp; Snow Reports">Ski &amp; Snow Reports</a></li>
+		<li><a href="/marine-weather/" title="Marine Weather">Marine Weather</a></li>
+		<li><a href="/Aviation_Maps/" title="Aviation">Aviation</a></li>
+		<li><a href="/sailing-weather/" title="Sailing Weather">Sailing Weather</a></li>
+		</ul>
+		</li>
+		<li>
+		<a href="/sitemap/" class="browse">Site Map</a>
+		</li>
+	 </ul>
+	 <ul class="sidebar-footer">
+		<li><a href="/weatherstation/about.asp" title="Personal Weather Station Network">Personal Weather Station Network</a></li>
+	 <li><a href="/download/index.asp" title="Weather Underground Mobile Apps">Mobile Apps</a></li>
+	 <li><a href="/printer/cityforecast.asp" title="Daily Forecast Flyer">Daily Forecast Flyer</a></li>
+		<li><a href="/weather/api/" title="Weather API for Developers">Weather API for Developers</a></li>
+	 </ul>
+  </div>
+</nav>
+<nav id="feature-menu">
+  <ul class="menu-list">
+	 <li>
+		<label class="maps">Maps & Radar</label>
+		<ul class="menu-list">
+		<li><a href="/weather-radar/" title="Radar Maps">Radar Maps</a></li>
+		<li><a href="/wundermap/?units=english&rad=1&rad.num=1&rad.spd=25&rad.opa=81&rad.type=00Q&rad.type2=&rad.smo=1&rad.stm=0&sat=0&stormreports=0&svr=0&pix=0&cams=0&tor=0&riv=0&wxsn=0&ski=0&tfk=0&mm=0&ndfd=0&fire=0&firewfas=0&extremes=0&hurrevac=0&sst=0&livesurge=0&femaflood=0&tsunami=0&seismicrisk=0&fault=0&fissures=0&fronts=0&dir=1&dir.mode=driving&hur=0" title="Interactive Radar">Interactive Radar</a></li>
+		<li><a href="/wundermap/?zoom=5&type=&tl.play=0&tl.spd=2&extremes=0&fault=0&femaflood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=0&dir=1&dir.mode=driving&sst=0&sat=1&sat.num=1&sat.spd=25&sat.opa=87&sat.gtt1=108&sat.gtt2=108&sat.type=IR4&seismicrisk=0&svr=0&ski=0&snowfall=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=0&cams=0&pix=0" title="Interactive Satellite">Interactive Satellite</a></li>
+		<li><a href="/wundermap/" title="WunderMap">WunderMap</a></li>
+		<li><a href="/maps/" title="Current Conditions Maps">Current Conditions Maps</a></li>
+		<li><a href="/ndfdimage/viewimage/" title="Forecast Maps">Forecast Maps</a></li>
+		<li><a href="/maps/catalog/" title="All Maps Catalog">Maps Catalog</a></li>
+		</ul>
+	 </li>
+	 <li>
+		<label class="severe">Severe Weather</label>
+		<ul class="menu-list">
+		<li><a href="/severe.asp" title="U.S. Severe Weather Map">U.S. Severe Weather Map</a></li>
+		<li><a href="/severe/europe.asp" title="Europe Severe Weather Map">Europe Severe Weather Map</a></li>
+		<li><a href="/hurricane/" title="Hurricane &amp; Tropical Cyclones">Hurricane &amp; Tropical Cyclones</a></li>
+		<li><a href="/severeconvective.asp" title="Convective Outlook">Convective Outlook</a></li>
+		<li class="hide"><a href="/tornado/" title="Tornadoes">Tornadoes</a></li>
+		<li class="hide"><a href="/winter-storm/" title="Winter Storms">Winter Storms</a></li>
+		<li><a href="/fire/" title="Wildfires">Wildfires</a></li>
+		<li><a href="/prepare/" title="Preparedness">Preparedness</a></li>
+		<li><a href="/email/emailsettings.asp" title="Weather Alerts">Weather Alerts</a></li>
+		</ul>
+	 </li>
+	 <li>
+		<label class="news">News &amp; Blogs</label>
+		<ul class="menu-list">
+		<li><a href="/blog/JeffMasters/show.html" title="Dr. Jeff Masters">Dr. Jeff Masters</a></li>
+		<li><a href="/blog/" title="All Weather Blogs">All Weather Blogs</a></li>
+		<li><a href="/news/" title="Recent News Stories">Recent News Stories</a></li>
+		<li><a href="/weather-infographics/" title="Weather Infographics">Weather Infographics</a></li>
+		<li><a href="/weather-posters/" title="Weather Posters">Weather Posters</a></li>
+		</ul>
+	 </li>
+	 <li>
+		<label class="photos">Photos &amp; Video</label>
+		<ul class="menu-list">
+		<li><a href="/wximage/" title="WunderPhotos">WunderPhotos</a></li>
+		<li><a href="/webcams/" title="Webcams">Webcams</a></li>
+		<li><a href="/video/" title="Videos">Videos</a></li>
+		</ul>
+	 </li>
+	 <li>
+		<label class="activities">Activities</label>
+		<ul class="menu-list">
+		<li><a href="/ski/" title="Ski &amp; Snow Reports">Ski &amp; Snow Reports</a></li>
+		<li><a href="/marine-weather/" title="Marine Weather">Marine Weather</a></li>
+		<li><a href="/Aviation_Maps/" title="Aviation">Aviation</a></li>
+		<li><a href="/sailing-weather/" title="Sailing Weather">Sailing Weather</a></li>
+		</ul>
+	 </li>
+	 <li>
+		<a href="/history/">Historical Weather</a>
+	 </li>
+	 <li>
+		<a href="/climate/">Climate Change</a>
+	 </li>
+	 <li><a href="/weatherstation/about.asp" title="Personal Weather Station Network">Personal Weather Station Network</a></li>
+	 <li><a href="/personal-weather-station/signup" title="Register Your Personal Weather Station">Register Your PWS</a></li>
+	 <li><a href="/download/index.asp" title="Weather Underground Mobile Apps">Mobile Apps</a></li>
+  <li><a href="/printer/cityforecast.asp" title="Daily Forecast Flyer">Daily Forecast Flyer</a></li>
+	 <li><a href="/weather/api/" title="Weather API for Developers">Weather API for Developers</a></li>
+	 <li><a href="/sitemap/" title="Site Map">Site Map</a></li>
+  </ul>
+</nav>
+		<div id="wuForm-contain">
+		<form action="/cgi-bin/findweather/getForecast" name="wxsearch" id="wuForm" class="ui-front">
+		<div id="wuSearch-contain">
+		<input type="search" name="query" value="" id="wuSearch" placeholder="Search Locations" data-autoinitialize="true" />
+		</div>
+		<div id="wuSubmit-contain">
+		<span id="wuSubmit" title="Search">
+		<i class="fi-magnifying-glass"></i>
+		</span>
+		</div>
+		</form>
+		</div>
+		<a href="#" data-dropdown="wuSettings-anon" id="wuAccount">
+		<i class="fi-torso"></i>
+		</a>
+		<a href="#" data-dropdown="wuSettings-quick" id="wuSettings">
+		<i class="fi-widget"></i>
+		</a>
+		<div id="wuSettings-anon" class="f-dropdown content" aria-autoclose="false" data-dropdown-content>
+		<p>Member Sign In</p>
+		<form id="wuSettings-signin" action="https://www.wunderground.com/login/submitlogin.php" name="login" method="post">
+		<input type="hidden" name="referer" value="http://Wunderground.com/" />
+		<div class="email-field">
+		<label for="sign-in-email">Email</label>
+		<input id="sign-in-email" type="email" name="email" value="" required />
+		</div>
+		<div class="password-field">
+		<label for="sign-in-password">Password</label>
+		<input id="sign-in-password" type="password" name="password" required />
+		</div>
+		<a href="https://www.wunderground.com/login.asp">Forgot your password?</a>
+		<input type="submit" value="Sign In" class="button radius" />
+		</form>
+		<div id="facebook-sign-in">
+		<span>or</span>
+		<a id="do-facebook-login" class="do-facebook-login">Sign in with Facebook</a>
+		<div class="status"></div>
+		</div>
+		<p><a href="/members/signup.asp" title="Create an account with wunderground">Not yet a member?<br />Join the wunderground community.</a></p>
+		</div>
+		<div id="wuSettings-quick" data-dropdown-content class="f-dropdown content" >
+		<ul class="button-group toggle radius">
+ 	<li><a onclick="wui.SetUnitToEnglish()" title="Switch to English" class="button selected">&deg;F</a></li>
+		<li><a onclick="wui.SetUnitToMetric()" title="Switch to Metric" class="button ">&deg;C</a></li>
+		</ul>
+		<ul class="button-group radius toggle compact forecast-type">
+		<li><a href="/cgi-bin/findweather/getForecast?setpref=EXPFCT&value=1&referer=%2f" title="Use BestForecast" class="button selected" onclick="_gaq.push(['_trackEvent', 'Forecast Toggle', 'Click', 'BestForecast']);">BestForecast</a></li>
+		<li><a href="/cgi-bin/findweather/getForecast?setpref=EXPFCT&value=0&referer=%2f" title="Use NWS" class="button " onclick="_gaq.push(['_trackEvent', 'Forecast Toggle', 'Click', 'NWS']);">NWS</a></li>
+		</ul>
+		<p><a href="/about/data.asp#differences">What's the difference?</a></p>
+		<a href="/member/membersettings.html?page=prefs" id="wuSettings-more">More Settings</a>
+		</div>
+	</div>
+</nav>
+<script type="text/template" id="autocomplete_item_template">
+	<li class="needsclick needsfocus <% if (isCity) { %>is-city<% } %><% if (isFav) { %> is-fav<% } %><% if (hasConds && item.condition.severe) { %> is-severe<% } %><% if (hasConds) { %> has-conds<% } %>">
+		<a class="needsclick needsfocus">
+		<% if (item.label) { %><span class="needsclick needsfocus city-name"><%= item.label %> <i class="needsclick needsfocus fi-alert"></i></span><% } %>
+		<% if (hasConds) { %>
+		<span class="needsclick needsfocus city-conds">
+		<%= item.condition.temperature %> &deg;F <%= item.condition.condition %>
+		</span>
+		<span class="needsclick needsfocus cond-icon-touch cond-set-<%= item.condition.iconPref %> cond-<%= item.condition.icon %>"></span>
+		<% } %>
+		<% if (isCity) { %><span class="needsclick needsfocus city-star" title="<% if (isFav) { %>Remove From<% } else { %>Add To<% } %> Favorite Cities"></span><% } %>
+		</a>
+	</li>
+</script>
+		<div id="inner-wrap">
+		<div class="favs-wrapper">
+	<div id="favorites">
+		<div class="favorites-bar"></div>
+		<input type="button" class="favorites-list-toggle" value="&#x25BC;" data-dropdown="favorites-list" />
+		<div class="favorites-list f-dropdown" data-dropdown-content id="favorites-list"></div>
+	</div>
+</div>
+<script type="text/template" id="favorites-city-template">
+	<%
+		var options = options || {};
+		var isCity = true;
+		var isFav = wui.favorites.is(city.zmw);
+		var isHome = ''==city.zmw?true:false;
+		//hasConds: (options.showConditions && !!(item.condition))
+		var hasConds = !!(city.condition);
+	%>
+	<li class="<% if (isCity) { %>is-city<% } %><% if (isFav) { %> is-fav<% } %><% if (hasConds && city.condition.severe) { %> is-severe<% } %><% if (hasConds) { %> has-conds<% } %>" <% if (isCity) { %>data-zmw="<%= city.zmw %>"<% } %>>
+		<% if (options.label) { %><label><%= options.label %></label><% } %>
+		<a href="/weather-forecast/zmw:<%= city.zmw %>">
+		<span class="city-name"><%= city.name %> <i class="fi-alert"></i></span>
+		<% if (hasConds) { %>
+		<span class="city-conds">
+		<%= city.condition.temperature %> &deg;F <%= city.condition.condition %>
+		</span>
+		<span class="cond-icon-touch cond-set-<%= city.condition.iconPref %> cond-<%= city.condition.icon %>"></span>
+		<% } %>
+		<% if (isCity) { %><span class="city-star" title="<% if (isFav) { %>Remove From<% } else { %>Add To<% } %> Favorite Cities"></span><% } %>
+		<% if (isCity) { %><span class="city-home <% if (isHome) { %> active <% }  %>" title="Set this as your Home City"</span><% } %>
+  </a>
+	</li>
+</script>
+<script type="text/template" id="favorites-bar-template">
+	<ul class="no-bullet">
+		<li><a href="/member/membersettings.html?page=favorites" title="Manage Favorites"><i class="fi-star"></i></a></li>
+		<% 
+		if(favorites.length > 0) {
+		_.each(favorites, function(city) {
+		print(templateCity({
+		city: city
+		}));
+		});
+		} else {
+		try {
+		if(favCityList) {
+		%>
+		<li><a>Loading favorites...</a></li>
+		<% 
+			}} catch(e) {}
+		} %>
+		<% _.each(recents, function(city, i) {
+			print(templateCity({
+				city: city,
+				options: {
+					label: (i === 0) ? 'Recent Cities' : ''
+				}
+			}));
+		}); %>
+	</ul>
+</script>
+<script type="text/template" id="favorites-list-template">
+	<% if (favorites.length) { 
+	  $("#favorites-edit-list").addClass("favorites-list");
+	%>
+		<label>Favorites</label>
+		<ul class="list-favorites">
+		<% _.each(favorites, function(city) {
+				print(templateCity({
+					city: city
+				}));
+			}); %>
+		</ul>
+	 <% } %>
+	<% if (recents.length) { %>
+		<label>Recent Cities</label>
+		<ul class="list-recents">
+		<% _.each(recents, function(city) {
+				print(templateCity({
+					city: city
+				}));
+			}); %>
+		</ul>
+	<% } %>
+</script>
+	<center class="clearfix">
+		<div id="WX_WindowShade">
+		<div id="div-gpt-ad-615639597871654305-top" class="ad-box ad-bb" style="display: none;">
+		</div>
+		</div>
+	</center>
+		<section id="inner-content" role="main">
+<div class="geoip-content">
+	<div id="search-box" class="row">
+		<form action="/cgi-bin/findweather/hdfForecast" name="wxsearch" id="hp-search">
+		<div class="large-12 columns">
+		<div class="intro">Where is <em>Your</em> Weather?</div>
+		<div class="row collapse search-row">
+		<label class="medium-3 medium-push-9 large-3 large-push-9 columns trim-small" for="hpSearch">Search by <a href="/weather-by-zip-code.asp" title="Local weather by ZIP code">zip code</a>, <a href="/weather-by-city.asp?L=A" title="Local weather by city">city</a>, state, airport or <a href="/weather-by-country.asp" title="Local weather by country name">country</a></label>
+		<div class="small-10 medium-7 medium-pull-3 large-7 large-pull-3 columns ui-front">
+		<input type="text" name="query" id="hpSearch" placeholder="e.g., Sunnyvale, CA or 94086">
+		</div>
+		<div class="submit-button-wrapper small-2 medium-2 medium-pull-3 large-2 large-pull-3 columns">
+		<button type="submit" class="button postfix"><i class="fi-magnifying-glass"></i><span class="trim-small">&nbsp;&nbsp;Search</span></button>
+		</div>
+		</div>
+		</div>
+		</form>
+	</div>
+		<div id="weather-snippet" class="row">
+		<div class="columns medium-3 large-3">
+		<h1><a href="/cgi-bin/findweather/getForecast?query=37.369701,-122.021400&sp=KCASUNNY4">Sunnyvale, CA</a> </h1>
+		<div id="pwsname">
+		<a href="/cgi-bin/findweather/getForecast?query=37.369701,-122.021400&sp=KCASUNNY4">Strawberry Gardens, Sunnyvale</a>
+		</div>
+		</div>
+		<div id="condition-img" class="columns small-3 medium-2 large-1">
+		<div id="hpIcon"><img src="//icons.wxug.com/i/c/v1/clear.svg" alt="Clear" class="wx-data" data-station="KCASUNNY4" data-variable="icon_url" /></div>
+		</div>
+		<div class="columns small-4 medium-3 large-2">
+		<div id="temp" style="color: #b6c609;">
+	<span class="wx-data" data-station="KCASUNNY4" data-variable="temperature">
+		<span class="wx-value">59.5</span>
+		<span class="wx-unit">&deg;F</span>
+	</span>
+		</div>
+		</div>
+		<div class="columns small-5 medium-2 large-2">
+		<div id="condition">
+		<strong>
+		Clear
+		</strong>
+		</div>
+		<div id="feel">
+		<span class="wx-label">Feels Like</span>
+		<span style="color: #b6c609;">
+	<span class="wx-data" data-station="KCASUNNY4" data-variable="feelslike">
+		<span class="wx-value">59.5</span>
+		<span class="wx-unit">&deg;F</span>
+	</span>
+		</span>
+		</div>
+		</div>
+		<div id="hi-low" class="columns large-2 show-for-large-up">
+		Hi:
+		<span class="high">
+		<span class="wx-value">65</span>
+		<span class="wx-unit">&deg;F</span>
+		</span>
+		<br/>
+		Lo:
+		<span class="low">
+		<span class="wx-value">40</span>
+		<span class="wx-unit">&deg;F</span>
+		</span>
+		</div>
+		<div id="full-link" class="columns medium-2 large-2">
+		<a href="/cgi-bin/findweather/getForecast?query=37.369701,-122.021400&sp=KCASUNNY4" id="gfct"><b>Full Forecast</b></a>
+		</div>
+		</div>
+	<div id="pws-map" class="row ">
+	<h3 class="show-for-small-only">Nearby Weather Stations</h3>
+<div id="map" class="cPointer">
+	<div class="map-ui"></div>
+</div>
+	<div id="list-slider" class="show-for-small-only">
+	</div>
+<div id="list" class="hidden-right">
+	<div id="nearby-stations">
+		<div class="close-list show-for-small-only">&#215;</div>
+		<h3 class="show-for-medium-up">Nearby Weather Stations</h3>
+		<table cellspacing="0" cellpadding="0">
+		<tbody>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASUNNY4" id="KCASUNNY4">Strawberry Gardens, Sunnyvale</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">59.5</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASUNNY27" id="KCASUNNY27">Heritage District</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">59.5</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASUNNY12" id="KCASUNNY12">Sunnyvale</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">63.1</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASUNNY36" id="KCASUNNY36">Sunnyvale West</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">60.8</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASANTA435" id="KCASANTA435">Texas Oak Terrace</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">68.2</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASUNNY44" id="KCASUNNY44">Ponderosa Park</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">60.6</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		<tr>
+		<td><div class="pws-name"><a href="/cgi-bin/findweather/getForecast?query=pws:KCASANTA58" id="KCASANTA58">El Camino/Wolfe</a></div></td>
+		<td>
+  <span class="wx-data"><span class="wx-value">60.8</span><span class="wx-unit">&nbsp;&deg;F</span></span>
+</td>
+		</tr>
+		</tbody>
+		</table>
+		<a href="/wundermap/?lat=37.369701&lon=-122.021400&zoom=10&wxsn=1" id="more"><span class="show-for-small-only">More stations on WunderMap</span><span class="show-for-medium-up">View more stations &amp; weather on WunderMap</span></a>
+	</div>
+	<div class="pws-network show-for-medium-up">
+		<div class="graphic"></div>
+		<h3>Our Unique Data</h3>
+		<a href="/weatherstation/about.asp" title="Learn more about our PWS network" >Learn how our 100,000+ personal weather stations bring you the most local, real time weather data.<br/><span><b>Learn more.</b></span></a>
+	</div>
+</div>
+<div class="show-for-small-only">
+	<div class="pws-network">
+		<div class="graphic"></div>
+		<h3>Our Unique Data</h3>
+		<a href="/weatherstation/about.asp" title="Learn more about our PWS network" >Learn how our 100,000+ personal weather stations bring you the most local, real time weather data.<br/><span><b>Learn more.</b></span></a>
+	</div>
+</div>
+<script id="wundermap_template" type="text/template">
+	<div class="content">
+		<div class="map">
+		<!-- map will be inserted here -->
+		</div>
+	</div>
+</script>
+	</div>
+		<div class="ad-boxes">
+		<div id="top-ad-wrapper">
+	<center class="clearfix">
+		<div id="WX_Top300Variable">
+		<div id="div-gpt-ad-615639597871654305-1" class="ad-box " style="display: none;">
+		</div>
+		</div>
+	</center>
+		<div id="surprise" class="show-for-large-up">
+	<center class="clearfix">
+		<div id="div-gpt-ad-615639597871654305-4" class="ad-box no-well" style="display: none;">
+		</div>
+	</center>
+		</div>
+		</div>
+		</div>
+</div>
+<div class="row">
+		<div class="columns show-for-large-up">
+	<center class="clearfix">
+		<div id="div-gpt-ad-615639597871654305-3" class="ad-box no-well" style="display: none;">
+		</div>
+	</center>
+		</div>
+	<div id="ww-events" class="columns large-4 medium-6">
+  <div class="wx-module simple">
+  <h3>Worldwide Events</h3>
+  <div id="caster-wrapper">
+  <img src="http://icons.wxug.com/i/wu/casterMap334.png" alt="Caster Map" />
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/wundermap/?lat=-4.9918&lon=133.9135&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.5 earthquake that occurred near Dobo on February 22, 2015 at 01:10 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 10 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="casterMapMarker " style="position:absolute; top:85.49262px; left:291.24196944444px;">1</a>
+  -->
+  <a href="http://www.wunderground.com/wundermap/?lat=-4.9918&lon=133.9135&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.5 earthquake that occurred near Dobo on February 22, 2015 at 01:10 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 10 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="caster-marker " style="position:absolute; top:52%; left:87%;">1</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/wundermap/?lat=2.6679&lon=-76.4939&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.6 earthquake that occurred near Cajibio on February 22, 2015 at 07:56 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 151.43 km, which is a deep-forcus earthquake (> 70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="casterMapMarker " style="position:absolute; top:78.59889px; left:96.030659444444px;">2</a>
+  -->
+  <a href="http://www.wunderground.com/wundermap/?lat=2.6679&lon=-76.4939&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.6 earthquake that occurred near Cajibio on February 22, 2015 at 07:56 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 151.43 km, which is a deep-forcus earthquake (> 70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="caster-marker " style="position:absolute; top:48%; left:28%;">2</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/wundermap/?lat=18.478&lon=-106.943&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 6.6 earthquake that occurred near Tomatlan on February 22, 2015 at 09:23 am Eastern Time.  This is considered a strong earthquake that can be destructive up to 160 km from the epicenter. This temblor occurred at a depth of 33 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="casterMapMarker " style="position:absolute; top:64.3698px; left:67.780661111111px;">3</a>
+  -->
+  <a href="http://www.wunderground.com/wundermap/?lat=18.478&lon=-106.943&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 6.6 earthquake that occurred near Tomatlan on February 22, 2015 at 09:23 am Eastern Time.  This is considered a strong earthquake that can be destructive up to 160 km from the epicenter. This temblor occurred at a depth of 33 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0" class="caster-marker " style="position:absolute; top:39%; left:20%;">3</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/history/airport/KGFK/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="casterMapMarker " style="position:absolute; top:37.845675657px; left:76.842165251278px;">4</a>
+  -->
+  <a href="http://www.wunderground.com/history/airport/KGFK/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="caster-marker " style="position:absolute; top:22%; left:22%;">4</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/history/airport/KGCC/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="casterMapMarker " style="position:absolute; top:41.094504549px; left:69.080534576333px;">5</a>
+  -->
+  <a href="http://www.wunderground.com/history/airport/KGCC/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="caster-marker " style="position:absolute; top:25%; left:20%;">5</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/history/airport/KDDH/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="casterMapMarker " style="position:absolute; top:42.395804217px; left:99.041566043611px;">6</a>
+  -->
+  <a href="http://www.wunderground.com/history/airport/KDDH/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="caster-marker " style="position:absolute; top:25%; left:29%;">6</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/history/airport/PADE/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="casterMapMarker " style="position:absolute; top:21.537398529px; left:15.988976458px;">7</a>
+  -->
+  <a href="http://www.wunderground.com/history/airport/PADE/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="caster-marker " style="position:absolute; top:12%; left:4%;">7</a>
+  <!-- old way, requires glossary js      
+                        <a href="http://www.wunderground.com/history/airport/KLVM/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="casterMapMarker " style="position:absolute; top:39.871499634px; left:64.535448409167px;">8</a>
+  -->
+  <a href="http://www.wunderground.com/history/airport/KLVM/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA" class="caster-marker " style="position:absolute; top:24%; left:19%;">8</a>
+  </div>
+  <div id="caster-data">
+  <ol>
+  <li>
+  <a href="http://www.wunderground.com/wundermap/?lat=-4.9918&lon=133.9135&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.5 earthquake that occurred near Dobo on February 22, 2015 at 01:10 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 10 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0">5.5 earthquake Dobo</a>
+  <div>There was a 5.5 earthquake that occurred near Dobo on February 22, 2015 at 01:10 am Eastern Time. This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 10 km, which is a shallow-focus earthquake (0-70 km deep).</div>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/wundermap/?lat=2.6679&lon=-76.4939&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 5.6 earthquake that occurred near Cajibio on February 22, 2015 at 07:56 am Eastern Time.  This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 151.43 km, which is a deep-forcus earthquake (> 70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0">5.6 earthquake Cajibio</a>
+  <div>There was a 5.6 earthquake that occurred near Cajibio on February 22, 2015 at 07:56 am Eastern Time. This is considered a moderate earthquake with possible major damage to poorly constructed buildings and slight damage to well-designed buildings. This temblor occurred at a depth of 151.43 km, which is a deep-forcus earthquake (> 70 km deep).</div>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/wundermap/?lat=18.478&lon=-106.943&zoom=7&type=hyb&units=english&pin.type=earthquake&pin=There was a 6.6 earthquake that occurred near Tomatlan on February 22, 2015 at 09:23 am Eastern Time.  This is considered a strong earthquake that can be destructive up to 160 km from the epicenter. This temblor occurred at a depth of 33 km, which is a shallow-focus earthquake (0-70 km deep).&rad=0&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0&fire=0&tor=0&ndfd=0&pix=0&dir=0&ads=0&tfk=0&ski=0">6.6 earthquake Tomatlan</a>
+  <div>There was a 6.6 earthquake that occurred near Tomatlan on February 22, 2015 at 09:23 am Eastern Time. This is considered a strong earthquake that can be destructive up to 160 km from the epicenter. This temblor occurred at a depth of 33 km, which is a shallow-focus earthquake (0-70 km deep).</div>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/history/airport/KGFK/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA">Grand Forks, ND set a record low temperature of -25 for Feb 22</a>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/history/airport/KGCC/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA">Gillette, WY set a record low temperature of 1 for Feb 22</a>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/history/airport/KDDH/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA">Bennington, VT set a record low temperature of 21 for Feb 22</a>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/history/airport/PADE/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA">Deering, AK set a record high temperature of 50 for Feb 22</a>
+  </li>
+  <li>
+  <a href="http://www.wunderground.com/history/airport/KLVM/2015/02/22/DailyHistory.html?req_city=NA&req_state=NA&req_statename=NA">Livingston, MT set a record low temperature of -11 for Feb 22</a>
+  </li>
+  </ol>
+  </div>
+  </div>
+	</div>
+	<div id="news-blogs" class="columns large-3 medium-6">
+	<div class="wx-module simple" id="blog-mod">
+		<h3>WunderBlogs&reg; &amp; News</h3>
+		<div class="content">
+		<div class="feature">
+		<div class="portrait jeff"></div>
+		<div class="title"><a href="/blog/JeffMasters/comment.html?entrynum=2921">A Nation Divided: Heat and Cold Records Split the U.S.</a></div>
+		<div class="author">
+		By Dr. Jeff Masters<br />
+		<span>Director of Meteorology, Weather Underground</span>
+		</div>
+		</div>
+		<div class="feature">
+		<div class="portrait kari"></div>
+		<div class="title"><a href="/blog/nationalsummary/comment.html?entrynum=300">Weather Underground National Forecast for Sunday, February 22, 2015</a></div>
+		<div class="author">
+		By Kari Strenfel<br />
+		<span>Meteorologist, Weather Underground</span>
+		</div>
+		</div>
+		<div class="feature">
+		<div class="portrait chris"></div>
+		<div class="title"><a href="/blog/weatherhistorian/comment.html?entrynum=322">The RRR ‘Ridiculously Resilient Ridge’ Returns to California</a></div>
+		<div class="author">
+		By Christopher C. Burt<br />
+		<span>Weather Historian, Weather Underground</span>
+		</div>
+		</div>
+		<div class="more">
+		<a href="/blog/">More Blogs</a>
+		</div>
+		<div class="article">
+		<div class="thumb">
+		<a href="/news/winter-storm-quantum-texas-southern-plains-snow-ice" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);" title="Winter Storm Quantum to Bring Early Week Snow, Ice From Rockies to the South"><img data-interchange="[http://dsx.weather.com//util/image/w/map_specnewsdct-112_ltst_4namus_enus_1280x720.jpg?v=at&w=155&h=114&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0, (medium)]"></a>
+		</div>
+		<div class="title"><a href="/news/winter-storm-quantum-texas-southern-plains-snow-ice" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);">Winter Storm Quantum to Bring Early Week Snow, Ice From Rockies to the South</a></div>
+		<div class="date">February 22, 2015</div>
+		</div>
+		<div class="article">
+		<div class="thumb">
+		<a href="/news/winter-storm-pandora-reports-snow-ice" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);" title="Winter Storm Pandora: Snow and Ice Reports"><img data-interchange="[http://dsx.weather.com//util/image/w/AP906748481988_0.jpg?v=at&w=155&h=114&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0, (medium)]"></a>
+		</div>
+		<div class="title"><a href="/news/winter-storm-pandora-reports-snow-ice" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);">Winter Storm Pandora: Snow and Ice Reports</a></div>
+		<div class="date">February 22, 2015</div>
+		</div>
+		<div class="article">
+		<div class="thumb">
+		<a href="/news/new-england-boston-record-snow-tracker" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);" title="How New England and Boston's Snow Measures Up In The Record Books"><img data-interchange="[http://dsx.weather.com//util/image/w/AP218236318123.jpg?v=at&w=155&h=114&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0, (medium)]"></a>
+		</div>
+		<div class="title"><a href="/news/new-england-boston-record-snow-tracker" onclick="_gaq.push(['_trackEvent', 'News', 'Click', 'Index News']);">How New England and Boston's Snow Measures Up In The Record Books</a></div>
+		<div class="date">February 22, 2015</div>
+		</div>
+		<div class="more">
+		<a href="/news/">More News</a>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div id="photo-reel" class="columns large-5 medium-12">
+		<div id="photo-mod">
+	<div class="slideshow-wrapper">
+		<div class="preloader"></div>
+		<ul id="orbit-ul" data-orbit data-options="timer:false;">
+		<li data-orbit-slide="step-1" class="orbit-slide">
+		<a href="/wximage/Biskitten/4411" id="thumb_0">
+		<img id="image1" src="//icons.wxug.com/data/wximagenew/b/Biskitten/4411.jpg" alt="Sky on Fire" />
+		<div class="orbit-caption-hp">
+		<div class="caption-title">WunderPhotos</div>
+		<div>View more Approvers' Choice photos</div>
+		</div>
+		</a>
+		</li>
+		<li data-orbit-slide="step-2" class="orbit-slide">
+		<a href="/wximage/PammiePi/123" id="thumb_1">
+		<img id="image1" src="//icons.wxug.com/data/wximagenew/p/PammiePi/123.jpg" alt="Sunday morning sunrise.jpg" />
+		<div class="orbit-caption-hp">
+		<div class="caption-title">VIP Gallery</div>
+		<div>See more current weather event photos</div>
+		</div>
+		</a>
+		</li>
+		<li data-orbit-slide="step-3" class="orbit-slide">
+		<a href="/wundermap/?zoom=9&tl.play=0&tl.spd=2&viewportstart=now-3660&viewportend=now-60&groupSevere=0&groupHurricane=0&groupFire=0&groupCamsPhotos=1&groupRealEstate=0&eyedropper=0&extremes=0&fault=0&favs=0&femaflood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&stateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=0&cams=1&pix=0&PrecipStart=0" id="thumb_2">
+		<img src="//icons.wxug.com/i/o/webcams-homepage-640.jpg" alt="View All Webcams" />
+		<div class="orbit-caption-hp">
+		<div class="caption-title">Webcams</div>
+		<div>View weather around the globe, as it happens.</div>
+		</div>
+		</a>
+		</li>
+		<li data-orbit-slide="step-4" class="orbit-slide video-slide">
+		<a href="/video/" id="thumb_3">
+		<div class="orbit-caption-hp">
+		<div class="caption-title">Videos</div>
+		<div></div>
+		</div>
+		</a>
+		</li>
+		</ul>
+		<div class="extra-thumbs-wrapper" data-equalizer>
+		<a data-orbit-link="step-1" id="bullet-thumb-0">
+		<img src="//icons.wxug.com/data/wximagenew/b/Biskitten/4411.jpg" alt="Sky on Fire" data-equalizer-watch />
+		</a>
+		<a data-orbit-link="step-2" id="bullet-thumb-1">
+		<img src="//icons.wxug.com/data/wximagenew/p/PammiePi/123.jpg" alt="Sunday morning sunrise.jpg" data-equalizer-watch />
+		</a>
+		<a data-orbit-link="step-3" id="bullet-thumb-2">
+		<img src="//icons.wxug.com/i/o/webcams-homepage-640.jpg" alt="View All Webcams" data-equalizer-watch />
+		</a>
+		<a data-orbit-link="step-4" id="bullet-thumb-3">
+		<img src="" alt=""  data-equalizer-watch />
+		</a>
+		</div>
+	</div>
+</div>
+	<center class="clearfix">
+		<div id="div-gpt-ad-615639597871654305-2" class="ad-box compact-large right-large margin-top" style="display: none;">
+		</div>
+	</center>
+	</div>
+</div>
+		</section>
+		<footer class="primary">
+	<nav class="navigation">
+		<div class="row collapse">
+		<div class="small-2 columns maps">
+		<h6>Maps &amp; Radar</h6>
+		<ul class="no-bullet">
+		<li><a href="/wundermap/">WunderMap</a></li>
+		<li><a href="/weather-radar/">NEXRAD Radar</a></li>
+		<li><a href="/maps/">Current and Forecast Maps</a></li>
+		</ul>
+		</div>
+		<div class="small-2 columns hide-for-small-only severe">
+		<h6>Severe Weather</h6>
+		<ul class="no-bullet">
+		<li><a href="/severe.asp">US Severe Weather Map</a></li>
+		<li><a href="/hurricane/">Hurricane &amp; Tropical Cyclones</a></li>
+		<li><a href="/email/emailsettings.asp">Weather Alerts</a></li>
+		</ul>
+		</div>
+		<div class="small-2 columns hide-for-small-only news">
+		<h6>News &amp; Blogs</h6>
+		<ul class="no-bullet">
+		<li><a href="/blog/JeffMasters/show.html">Dr. Jeff Masters</a></li>
+		<li><a href="/blog/">Weather Blogs</a></li>
+		<li><a href="/news/">Recent News Stories</a></li>
+		</ul>
+		</div>
+		<div class="small-2 columns hide-for-small-only photos">
+		<h6>Photos &amp; Videos</h6>
+		<ul class="no-bullet">
+		<li><a href="/wximage/">WunderPhotos</a></li>
+		<li><a href="/webcams/">Webcams</a></li>
+		<li><a href="/video/">Video</a></li>
+		</ul>
+		</div>
+		<div class="small-2 columns hide-for-small-only climate">
+		<h6>Climate Change</h6>
+		<ul class="no-bullet">
+		<li><a href="/climate/evidence.asp">Evidence</a></li>
+		<li><a href="/climate/extremes.asp">Record Extremes</a></li>
+		<li><a href="/climate/local.asp">Local</a></li>
+		</ul>
+		</div>
+		<div class="small-2 columns hide-for-small-only activities">
+		<h6>Activities &amp; Travel</h6>
+		<ul class="no-bullet">
+		<li><a href="/ski/">Ski &amp; Snow Reports</a></li>
+		<li><a href="/MAR/">Marine Weather</a></li>
+		<li><a href="/roadtrip/">Road Trip Planner</a></li>
+		</ul>
+		</div>
+		</div>
+	</nav>
+	<div class="company">
+		<div class="row collapse">
+		<div class="small-12 medium-1 large-2 columns">
+		<ul class="no-bullet social">
+		<li><a href="https://www.facebook.com/wunderground" target="_blank"><i class="fi-social-facebook"></i> Like</a></li>
+		<li><a href="https://plus.google.com/u/0/b/104500307199084006719/+weatherunderground/posts" target="_blank"><i class="fi-social-google-plus"></i> +1</a></li>
+		<li><a href="https://twitter.com/wunderground" target="_blank"><i class="fi-social-twitter"></i> Tweet</a></li>
+		<li><a href="http://www.pinterest.com/wunderground/" target="_blank"><i class="fi-social-pinterest"></i> Pin</a></li>
+		<li><a href="http://instagram.com/weatherunderground" target="_blank"><i class="fi-social-instagram"></i> Follow</a></li>
+		</ul>
+		</div>
+		<div class="small-12 medium-3 large-3 columns">
+		<h6>Our Company</h6>
+		<ul class="no-bullet left">
+		<li><a href="/about/background.asp" title="About Weather Underground">About Us</a></li>
+		<li><a href="/about/data.asp" title="About Our Data">About Our Data</a></li>
+		<li><a href="http://careers.weather.com/search/?q=&locationsearch=san+francisco?utm_source=careersite&utm_campaign=wunderground" target="_blank" title="Weather Underground Job Opportunities">Employment</a></li>
+		<li><a href="/about/contact.asp" title="Contact Weather Underground">Contact Us</a></li>
+		</ul>
+		<ul class="no-bullet left">
+		<li><a href="/about/pr/news.asp">Press Center</a></li>
+		<li><a href="http://advertising.weather.com/contact/" target="_blank" title="Advertise on Weather Underground">Advertising</a></li>
+		<li><a href="http://forecastfactor.weather.com/subscribe" target="_blank" title="Forecast Factor">Forecast Factor</a></li>
+		<li><a href="/life/local-advertise-self-serve">Self-Service Advertising</a></li>
+		</ul>
+		</div>
+		<div class="small-12 medium-3 large-3 columns">
+		<h6>Our Community</h6>
+		<ul class="no-bullet">
+		<li><a href="/weatherstation/about.asp" title="Weather Underground's Personal Weather Station Network">Personal Weather Station Network</a></li>
+		<li><a href="/weatherstation/setup.asp" title="Join Weather Underground's Personal Weather Station Network">Register a Weather Station</a></li>
+		<li><a href="/wximage/multiupload.html" title="Weather Underground Photos">Upload Photos</a></li>
+		<li><a href="/blog/" title="Weather Underground Blogs">Post a Blog</a></li>
+		</ul>
+		</div>
+		<div class="small-12 medium-3 large-2 columns">
+		<h6>Our Products</h6>
+		<ul class="no-bullet">
+		<li><a href="/download/index.asp" title="Weather Underground Mobile Apps">Mobile Applications</a></li>
+		<li><a href="http://www.fullscreenweather.com/" title="Full Screen Weather">Full Screen Weather</a></li>
+		<li><a href="/weather/api/" title="Weather Underground API">The Weather API</a></li>
+		<li><a href="/stickers/" title="Weather Widgets">Download Widgets</a></li>
+		<li><a href="/roku/" title="Weather Underground for Roku">Weather Underground for Roku</a></li>
+		</ul>
+		</div>
+		<div class="small-12 medium-2 large-2 columns">
+		<a href="/" class="logo"></a>
+		</div>
+		</div>
+	</div>
+	<div class="floor">
+		<div class="row collapse">
+		<div class="small-12 medium-8 medium-push-4 large-8 columns">
+		<ul class="inline-list">
+		<li><a href="/about/contact.asp">Contact</a></li>
+		<li><a href="http://help.wunderground.com/">Support</a></li>
+		<li><a href="javascript:void(0)" data-uv-lightbox="classic_widget" data-uv-mode="feedback" data-uv-primary-color="#ff8833" data-uv-link-color="#16aadc" data-uv-forum-id="233172">Feedback</a></li>
+		<li><a href="/members/tos.asp">Terms of Service</a></li>
+		<li><a href="/members/tos.asp#privacy">Privacy Statement</a></li>
+		<li><a href="/adchoices.asp" class="ad-choices">AdChoices</a></li>
+		</ul>
+		</div>
+		<div class="small-12 medium-4 medium-pull-8 large-4 columns">
+		<p>Copyright &copy; 2015 The Weather Channel, LLC</p>
+		</div>
+		</div>
+	</div>
+</footer>
+<a class="exit-off-canvas"></a>
+		</div>
+		</div>
+<script>
+	if(!window.wui) window.wui = {};
+</script>
+<script>
+	wui.bootstrapped = {
+		pageType: "Index",
+		"localtime": {
+  "epoch": 1424633090,
+  "pretty": "11:24 AM PST on February 22, 2015",
+  "rfc822": "Sun, 22 Feb 2015 11:24:50 -0800",
+  "iso8601": "2015-02-22T11:24:50-0800",
+  "year": 2015,
+  "month": 2,
+  "day": 22,
+  "yday": 52,
+  "hour": 11,
+  "min": "24",
+  "sec": 50,
+  "monthname": "February",
+  "monthname_short": "Feb",
+  "weekday": "Sunday",
+  "weekday_short": "Sun",
+  "ampm": "AM",
+  "tz_short": "PST",
+  "tz_long": "America/Los_Angeles",
+  "tz_offset_text": "-0800",
+  "tz_offset_hours": -8.00
+},
+		"usertime": {
+  "epoch": 1424633090,
+  "pretty": "7:24 PM GMT on February 22, 2015",
+  "rfc822": "Sun, 22 Feb 2015 19:24:50 +0000",
+  "iso8601": "2015-02-22T19:24:50+0000",
+  "year": 2015,
+  "month": 2,
+  "day": 22,
+  "yday": 52,
+  "hour": 19,
+  "min": "24",
+  "sec": 50,
+  "monthname": "February",
+  "monthname_short": "Feb",
+  "weekday": "Sunday",
+  "weekday_short": "Sun",
+  "ampm": "PM",
+  "tz_short": "GMT",
+  "tz_long": "UTC",
+  "tz_offset_text": "+0000",
+  "tz_offset_hours": 0.00
+},
+		search: "", //Used for Wundermap autocomplete initialization
+		async: true,
+		//These scripts are interacted with via scriptUsher.js, located in wui-js
+		scripts: {
+		amazon_bid: {
+		url: "//aax.amazon-adsystem.com/e/dtb/bid?src=1004&u="+encodeURIComponent(document.location)+"&cb="+Math.round(1e7 * Math.random()),
+		promise: null,
+		timeout: 500
+		},
+		lotame_ads: {
+		url :"//ad.crwdcntrl.net/5/c=2216/pe=y/callback=?",
+		dataType : "jsonp",
+		promise: null,
+		timeout: 500
+		},
+		'amp.premier': {
+		url: '/amp.premier/amp.premier.min.js',
+		done: function() {
+		akamai.amp.AMP.loadDefaults('/amp.premier/amp.premier.xml');
+		}
+		},
+		googlemaps: {
+		url: "//maps.googleapis.com/maps/api/js?sensor=false&client=gme-theweatherchannel&channel=CityPage&libraries=geometry&" +
+		"callback=wui.bootstrapped.scripts.googlemaps.callback",
+		promise: null,
+		callback: function() {
+		wui.bootstrapped.scripts.googlemaps.promise.resolve();
+		}
+		},
+		'jquery-cookie': {
+		url: "//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js",
+		promise: null
+		},
+		tealium: {
+		url: "//tags.tiqcdn.com/utag/weather/wunderground/prod/utag.js",
+		promise: null
+		},
+		wundermap: {
+		// SHH TODO: Update SERVERCONFIG, then reference SERVERCONFIG.WunderMap.Version.release
+		url: "//icons.wxug.com/scripts/wundermap/release/6.1.2/wundermap.min.js",
+		promise: null
+		}
+		}
+	};
+</script>
+<script>
+wui.bootstrapped.prefs = {
+	'selected_pws': "",
+	'CP_FCTTAB': null,
+	'CP_VAR_dp': null,
+	'CP_VAR_fl': null,
+	'CP_VAR_temp': null,
+	'CP_VAR_cc': null,
+	'CP_VAR_pop': null,
+	'CP_VAR_h': null,
+	'CP_VAR_p': null,
+	'CP_VAR_wspd': null,
+	'CP_VAR_qpf': null,
+	'CP_VAR_precip': null,
+	'EXPFCT': "1",
+	'RADARBOX': null,
+	'GMAPTYPE': 'terrain',
+	'GMAPUNITS': 'english',
+	'iconset': '',
+	'LangCode': 'EN',
+	'Units': 'english',
+	'raw_string': '',
+	'rapidfire': '10'
+};
+</script>
+<script>
+	wui.asyncCityPage = true;
+	wui.bootstrapped.API = "";
+	wui.api_data =
+{
+	"response": {
+		"version": "2.0",
+		"units": "english",
+		"termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+		"attribution": {
+		"image":"//icons.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"features": {
+		"labels": 1
+		,
+		"astronomy10day": 1
+		,
+		"conditions": 0
+		,
+		"forecast10day": 1
+		,
+		"hourly10day": 0
+		,
+		"webcams": 0
+		,
+		"history": 0
+		}
+		, "location": {
+		"name": "Sunnyvale",
+		"neighborhood":null,
+		"city": "Sunnyvale",
+		"state": "CA",
+		"state_name":"California",
+		"country": "US",
+		"country_iso3166":null,
+		"country_name":"USA",
+		"zip":"94086",
+		"magic":"1",
+		"wmo":"99999",
+		"latitude":37.369701,
+		"longitude":-122.021400,
+		"elevation":72,
+		"l": "/q/zmw:94086.1.99999"
+		},
+		"date": {
+	"epoch": 1424633090,
+	"pretty": "11:24 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 11:24:50 -0800",
+	"iso8601": "2015-02-22T11:24:50-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 11,
+	"min": "24",
+	"sec": 50,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+	}
+		,
+"forecast": {
+	"source": "bestfct",
+	"days": [
+		{
+		"summary": {
+		"date": {
+	"epoch": 1424660400,
+	"pretty": "7:00 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-22T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 65,
+		"low": 40,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 20,
+		"wind_max_dir": "N",
+		"wind_max_dir_degrees": 349,
+		"wind_avg_speed": 13,
+		"wind_avg_dir": "N",
+		"wind_avg_dir_degrees": 349,
+		"humidity_avg": 40,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": "Today is forecast to be <span class=\u0022b cooler\u0022>Cooler</span> than yesterday.",
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Sunday",
+		"text": "Plentiful sunshine. High near 65F. Winds N at 10 to 20 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Sunday Night",
+		"text": "Clear skies. Low near 40F. Winds NNW at 5 to 10 mph."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1424746800,
+	"pretty": "7:00 PM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-23T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 64,
+		"low": 39,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 15,
+		"wind_max_dir": "N",
+		"wind_max_dir_degrees": 4,
+		"wind_avg_speed": 10,
+		"wind_avg_dir": "N",
+		"wind_avg_dir_degrees": 4,
+		"humidity_avg": 38,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Monday",
+		"text": "Sunny skies. High 64F. Winds N at 10 to 15 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Monday Night",
+		"text": "Clear skies. Low 39F. Winds light and variable."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1424833200,
+	"pretty": "7:00 PM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-24T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 67,
+		"low": 44,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 10,
+		"wind_max_dir": "NNW",
+		"wind_max_dir_degrees": 327,
+		"wind_avg_speed": 8,
+		"wind_avg_dir": "NNW",
+		"wind_avg_dir_degrees": 327,
+		"humidity_avg": 33,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Tuesday",
+		"text": "Mainly sunny. High 67F. Winds NNW at 5 to 10 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Tuesday Night",
+		"text": "Mostly clear skies. Low 44F. Winds light and variable."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1424919600,
+	"pretty": "7:00 PM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-25T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 69,
+		"low": 45,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 15,
+		"wind_max_dir": "NNW",
+		"wind_max_dir_degrees": 334,
+		"wind_avg_speed": 10,
+		"wind_avg_dir": "NNW",
+		"wind_avg_dir_degrees": 334,
+		"humidity_avg": 58,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Wednesday",
+		"text": "Sunny skies. High 69F. NE winds shifting to NW at 10 to 15 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Wednesday Night",
+		"text": "Clear to partly cloudy. Low around 45F. Winds light and variable."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425006000,
+	"pretty": "7:00 PM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-26T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 70,
+		"low": 48,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 15,
+		"wind_max_dir": "NW",
+		"wind_max_dir_degrees": 318,
+		"wind_avg_speed": 11,
+		"wind_avg_dir": "NW",
+		"wind_avg_dir_degrees": 318,
+		"humidity_avg": 59,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Thursday",
+		"text": "Mainly sunny. High near 70F. Winds NW at 10 to 15 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Thursday Night",
+		"text": "Clear skies. Low 48F. Winds light and variable."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425092400,
+	"pretty": "7:00 PM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-27T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 66,
+		"low": 45,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 10,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 20,
+		"wind_max_dir": "NW",
+		"wind_max_dir_degrees": 310,
+		"wind_avg_speed": 15,
+		"wind_avg_dir": "NW",
+		"wind_avg_dir_degrees": 310,
+		"humidity_avg": 71,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 10,
+		"title": "Friday",
+		"text": "Mostly sunny skies. High 66F. Winds NW at 10 to 20 mph."
+		},
+		"night": {
+		"condition": "Partly Cloudy",
+		"icon": "nt_partlycloudy",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_partlycloudy.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 20,
+		"title": "Friday Night",
+		"text": "Partly cloudy skies. Low near 45F. Winds WNW at 10 to 15 mph."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425178800,
+	"pretty": "7:00 PM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 19:00:00 -0800",
+	"iso8601": "2015-02-28T19:00:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 63,
+		"low": 44,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 10,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 15,
+		"wind_max_dir": "NW",
+		"wind_max_dir_degrees": 309,
+		"wind_avg_speed": 11,
+		"wind_avg_dir": "NW",
+		"wind_avg_dir_degrees": 309,
+		"humidity_avg": 66,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 10,
+		"title": "Saturday",
+		"text": "Except for a few afternoon clouds, mainly sunny. High 63F. Winds NW at 10 to 15 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 10,
+		"title": "Saturday Night",
+		"text": "Clear skies. Low 44F. Winds NW at 5 to 10 mph."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425265200,
+	"pretty": "7:00 PM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 19:00:00 -0800",
+	"iso8601": "2015-03-01T19:00:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 65,
+		"low": 43,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 10,
+		"wind_max_dir": "NNW",
+		"wind_max_dir_degrees": 344,
+		"wind_avg_speed": 9,
+		"wind_avg_dir": "NNW",
+		"wind_avg_dir_degrees": 344,
+		"humidity_avg": 57,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Sunday",
+		"text": "A mainly sunny sky. High around 65F. Winds NNW at 5 to 10 mph."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Sunday Night",
+		"text": "Clear. Low 43F. Winds SW at 5 to 10 mph."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425351600,
+	"pretty": "7:00 PM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 19:00:00 -0800",
+	"iso8601": "2015-03-02T19:00:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 65,
+		"low": 45,
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"skyicon": null,
+		"precip_type": "",
+		"pop": 0,
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 15,
+		"wind_max_dir": "SW",
+		"wind_max_dir_degrees": 236,
+		"wind_avg_speed": 11,
+		"wind_avg_dir": "SW",
+		"wind_avg_dir_degrees": 236,
+		"humidity_avg": 60,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Clear",
+		"icon": "clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 0,
+		"title": "Monday",
+		"text": "Sunshine and some clouds. High around 65F. S winds shifting to W at 10 to 15 mph."
+		},
+		"night": {
+		"condition": "Partly Cloudy",
+		"icon": "nt_partlycloudy",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_partlycloudy.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 20,
+		"title": "Monday Night",
+		"text": "Partly cloudy skies. Low around 45F. Winds WSW at 5 to 10 mph."
+		}
+		}
+		}
+		,
+		{
+		"summary": {
+		"date": {
+	"epoch": 1425438000,
+	"pretty": "7:00 PM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 19:00:00 -0800",
+	"iso8601": "2015-03-03T19:00:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 19,
+	"min": "00",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+},
+		"high": 64,
+		"low": 43,
+		"condition": "Chance of Rain",
+		"icon": "chancerain",
+		"icon_url": "//icons.wxug.com/i/c/v1/chancerain.svg",
+		"skyicon": null,
+		"precip_type": "rain",
+		"pop": 60,
+		"liquid_precip": 0.10,
+		"snow": 0.0,
+		"snow_range": null,
+		"wind_max_speed": 20,
+		"wind_max_dir": "WNW",
+		"wind_max_dir_degrees": 301,
+		"wind_avg_speed": 13,
+		"wind_avg_dir": "WNW",
+		"wind_avg_dir_degrees": 301,
+		"humidity_avg": 65,
+		"humidity_min": null,
+		"humidity_max": null,
+		"weather_quickie": null,
+		"day": {
+		"condition": "Chance of Rain",
+		"icon": "chancerain",
+		"icon_url": "//icons.wxug.com/i/c/v1/chancerain.svg",
+		"precip_type": "rain",
+		"liquid_precip": 0.10,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 60,
+		"title": "Tuesday",
+		"text": "Considerable cloudiness with occasional rain showers. High 64F. Winds WNW at 10 to 20 mph. Chance of rain 60%."
+		},
+		"night": {
+		"condition": "Clear",
+		"icon": "nt_clear",
+		"icon_url": "//icons.wxug.com/i/c/v1/nt_clear.svg",
+		"precip_type": "",
+		"liquid_precip": 0.00,
+		"snow": 0.0,
+		"snow_range": null,
+		"pop": 20,
+		"title": "Tuesday Night",
+		"text": "Clear skies. Low 43F. Winds NNW at 10 to 15 mph."
+		}
+		}
+		}
+	]
+}
+		,
+"astronomy": {
+	"days": [
+		{
+		"length_of_day": "11h 06m",
+		"length_of_night": "12h 54m",
+		"length_of_twilight": "11h 58m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 19,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1424616527,
+	"pretty": "6:48 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 06:48:47 -0800",
+	"iso8601": "2015-02-22T06:48:47-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 6,
+	"min": "48",
+	"sec": 47,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1424656493,
+	"pretty": "5:54 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 17:54:53 -0800",
+	"iso8601": "2015-02-22T17:54:53-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 17,
+	"min": "54",
+	"sec": 53,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1424614942,
+	"pretty": "6:22 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 06:22:22 -0800",
+	"iso8601": "2015-02-22T06:22:22-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 6,
+	"min": "22",
+	"sec": 22,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1424658078,
+	"pretty": "6:21 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 18:21:18 -0800",
+	"iso8601": "2015-02-22T18:21:18-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 18,
+	"min": "21",
+	"sec": 18,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"nauticalSunrise": {
+		"date": {
+	"epoch": 1424613122,
+	"pretty": "5:52 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 05:52:02 -0800",
+	"iso8601": "2015-02-22T05:52:02-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 5,
+	"min": "52",
+	"sec": 2,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"nauticalSunset": {
+		"date": {
+	"epoch": 1424659901,
+	"pretty": "6:51 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 18:51:41 -0800",
+	"iso8601": "2015-02-22T18:51:41-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 18,
+	"min": "51",
+	"sec": 41,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"astronomicalSunrise": {
+		"date": {
+	"epoch": 1424611310,
+	"pretty": "5:21 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 05:21:50 -0800",
+	"iso8601": "2015-02-22T05:21:50-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 5,
+	"min": "21",
+	"sec": 50,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"astronomicalSunset": {
+		"date": {
+	"epoch": 1424661715,
+	"pretty": "7:21 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 19:21:55 -0800",
+	"iso8601": "2015-02-22T19:21:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 19,
+	"min": "21",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1424624940,
+	"pretty": "9:09 AM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 09:09:00 -0800",
+	"iso8601": "2015-02-22T09:09:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 9,
+	"min": "09",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1424673420,
+	"pretty": "10:37 PM PST on February 22, 2015",
+	"rfc822": "Sun, 22 Feb 2015 22:37:00 -0800",
+	"iso8601": "2015-02-22T22:37:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 22,
+	"yday": 52,
+	"hour": 22,
+	"min": "37",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "4",
+		"moon_phase": "Waxing Crescent",
+		"moon_icon": "waxingcrescent",
+		"moon_percent_illuminated": 20
+		}
+		,
+		{
+		"length_of_day": "11h 08m",
+		"length_of_night": "12h 52m",
+		"length_of_twilight": "12h 01m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 19,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1424702849,
+	"pretty": "6:47 AM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 06:47:29 -0800",
+	"iso8601": "2015-02-23T06:47:29-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 6,
+	"min": "47",
+	"sec": 29,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1424742954,
+	"pretty": "5:55 PM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 17:55:54 -0800",
+	"iso8601": "2015-02-23T17:55:54-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 17,
+	"min": "55",
+	"sec": 54,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1424701267,
+	"pretty": "6:21 AM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 06:21:07 -0800",
+	"iso8601": "2015-02-23T06:21:07-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 6,
+	"min": "21",
+	"sec": 7,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1424744537,
+	"pretty": "6:22 PM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 18:22:17 -0800",
+	"iso8601": "2015-02-23T18:22:17-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 18,
+	"min": "22",
+	"sec": 17,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1424713800,
+	"pretty": "9:50 AM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 09:50:00 -0800",
+	"iso8601": "2015-02-23T09:50:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 9,
+	"min": "50",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1424763720,
+	"pretty": "11:42 PM PST on February 23, 2015",
+	"rfc822": "Mon, 23 Feb 2015 23:42:00 -0800",
+	"iso8601": "2015-02-23T23:42:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 23,
+	"yday": 53,
+	"hour": 23,
+	"min": "42",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "5",
+		"moon_phase": "Waxing Crescent",
+		"moon_icon": "waxingcrescent",
+		"moon_percent_illuminated": 30
+		}
+		,
+		{
+		"length_of_day": "11h 10m",
+		"length_of_night": "12h 50m",
+		"length_of_twilight": "12h 03m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 19,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1424789171,
+	"pretty": "6:46 AM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 06:46:11 -0800",
+	"iso8601": "2015-02-24T06:46:11-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 6,
+	"min": "46",
+	"sec": 11,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1424829415,
+	"pretty": "5:56 PM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 17:56:55 -0800",
+	"iso8601": "2015-02-24T17:56:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 17,
+	"min": "56",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1424787591,
+	"pretty": "6:19 AM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 06:19:51 -0800",
+	"iso8601": "2015-02-24T06:19:51-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 6,
+	"min": "19",
+	"sec": 51,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1424830996,
+	"pretty": "6:23 PM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 18:23:16 -0800",
+	"iso8601": "2015-02-24T18:23:16-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 18,
+	"min": "23",
+	"sec": 16,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1424802780,
+	"pretty": "10:33 AM PST on February 24, 2015",
+	"rfc822": "Tue, 24 Feb 2015 10:33:00 -0800",
+	"iso8601": "2015-02-24T10:33:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 24,
+	"yday": 54,
+	"hour": 10,
+	"min": "33",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 0,
+	"pretty": null,
+	"rfc822": null,
+	"iso8601": null,
+	"year": null,
+	"month": null,
+	"day": null,
+	"yday": null,
+	"hour": null,
+	"min": null,
+	"sec": null,
+	"monthname": null,
+	"monthname_short": null,
+	"weekday": null,
+	"weekday_short": null,
+	"ampm": null,
+	"tz_short": null,
+	"tz_long": null,
+	"tz_offset_text": null,
+	"tz_offset_hours": null
+}
+		},
+		"moon_age": "6",
+		"moon_phase": "Waxing Crescent",
+		"moon_icon": "waxingcrescent",
+		"moon_percent_illuminated": 40
+		}
+		,
+		{
+		"length_of_day": "11h 13m",
+		"length_of_night": "12h 47m",
+		"length_of_twilight": "12h 05m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 20,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1424875492,
+	"pretty": "6:44 AM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 06:44:52 -0800",
+	"iso8601": "2015-02-25T06:44:52-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 6,
+	"min": "44",
+	"sec": 52,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1424915875,
+	"pretty": "5:57 PM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 17:57:55 -0800",
+	"iso8601": "2015-02-25T17:57:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 17,
+	"min": "57",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1424873914,
+	"pretty": "6:18 AM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 06:18:34 -0800",
+	"iso8601": "2015-02-25T06:18:34-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 6,
+	"min": "18",
+	"sec": 34,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1424917455,
+	"pretty": "6:24 PM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 18:24:15 -0800",
+	"iso8601": "2015-02-25T18:24:15-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 18,
+	"min": "24",
+	"sec": 15,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1424891940,
+	"pretty": "11:19 AM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 11:19:00 -0800",
+	"iso8601": "2015-02-25T11:19:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 11,
+	"min": "19",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1424853780,
+	"pretty": "12:43 AM PST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 00:43:00 -0800",
+	"iso8601": "2015-02-25T00:43:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 0,
+	"min": "43",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "7",
+		"moon_phase": "Waxing Crescent",
+		"moon_icon": "waxingcrescent",
+		"moon_percent_illuminated": 51
+		}
+		,
+		{
+		"length_of_day": "11h 15m",
+		"length_of_night": "12h 45m",
+		"length_of_twilight": "12h 07m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 21,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1424961812,
+	"pretty": "6:43 AM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 06:43:32 -0800",
+	"iso8601": "2015-02-26T06:43:32-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 6,
+	"min": "43",
+	"sec": 32,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425002335,
+	"pretty": "5:58 PM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 17:58:55 -0800",
+	"iso8601": "2015-02-26T17:58:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 17,
+	"min": "58",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1424960236,
+	"pretty": "6:17 AM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 06:17:16 -0800",
+	"iso8601": "2015-02-26T06:17:16-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 6,
+	"min": "17",
+	"sec": 16,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425003913,
+	"pretty": "6:25 PM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 18:25:13 -0800",
+	"iso8601": "2015-02-26T18:25:13-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 18,
+	"min": "25",
+	"sec": 13,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1424981220,
+	"pretty": "12:07 PM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 12:07:00 -0800",
+	"iso8601": "2015-02-26T12:07:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 12,
+	"min": "07",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1424943600,
+	"pretty": "1:40 AM PST on February 26, 2015",
+	"rfc822": "Thu, 26 Feb 2015 01:40:00 -0800",
+	"iso8601": "2015-02-26T01:40:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 26,
+	"yday": 56,
+	"hour": 1,
+	"min": "40",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "8",
+		"moon_phase": "First Quarter",
+		"moon_icon": "firstqtr",
+		"moon_percent_illuminated": 61
+		}
+		,
+		{
+		"length_of_day": "11h 17m",
+		"length_of_night": "12h 43m",
+		"length_of_twilight": "12h 10m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 21,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1425048131,
+	"pretty": "6:42 AM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 06:42:11 -0800",
+	"iso8601": "2015-02-27T06:42:11-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 6,
+	"min": "42",
+	"sec": 11,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425088795,
+	"pretty": "5:59 PM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 17:59:55 -0800",
+	"iso8601": "2015-02-27T17:59:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 17,
+	"min": "59",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1425046557,
+	"pretty": "6:15 AM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 06:15:57 -0800",
+	"iso8601": "2015-02-27T06:15:57-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 6,
+	"min": "15",
+	"sec": 57,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425090371,
+	"pretty": "6:26 PM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 18:26:11 -0800",
+	"iso8601": "2015-02-27T18:26:11-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 18,
+	"min": "26",
+	"sec": 11,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1425070680,
+	"pretty": "12:58 PM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 12:58:00 -0800",
+	"iso8601": "2015-02-27T12:58:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 12,
+	"min": "58",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1425033180,
+	"pretty": "2:33 AM PST on February 27, 2015",
+	"rfc822": "Fri, 27 Feb 2015 02:33:00 -0800",
+	"iso8601": "2015-02-27T02:33:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 27,
+	"yday": 57,
+	"hour": 2,
+	"min": "33",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "9",
+		"moon_phase": "Waxing Gibbous",
+		"moon_icon": "waxinggibbous",
+		"moon_percent_illuminated": 71
+		}
+		,
+		{
+		"length_of_day": "11h 20m",
+		"length_of_night": "12h 40m",
+		"length_of_twilight": "12h 12m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 21,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1425134450,
+	"pretty": "6:40 AM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 06:40:50 -0800",
+	"iso8601": "2015-02-28T06:40:50-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 6,
+	"min": "40",
+	"sec": 50,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425175255,
+	"pretty": "6:00 PM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 18:00:55 -0800",
+	"iso8601": "2015-02-28T18:00:55-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 18,
+	"min": "00",
+	"sec": 55,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1425132878,
+	"pretty": "6:14 AM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 06:14:38 -0800",
+	"iso8601": "2015-02-28T06:14:38-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 6,
+	"min": "14",
+	"sec": 38,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425176829,
+	"pretty": "6:27 PM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 18:27:09 -0800",
+	"iso8601": "2015-02-28T18:27:09-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 18,
+	"min": "27",
+	"sec": 9,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1425160260,
+	"pretty": "1:51 PM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 13:51:00 -0800",
+	"iso8601": "2015-02-28T13:51:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 13,
+	"min": "51",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1425122400,
+	"pretty": "3:20 AM PST on February 28, 2015",
+	"rfc822": "Sat, 28 Feb 2015 03:20:00 -0800",
+	"iso8601": "2015-02-28T03:20:00-0800",
+	"year": 2015,
+	"month": 2,
+	"day": 28,
+	"yday": 58,
+	"hour": 3,
+	"min": "20",
+	"sec": 0,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Saturday",
+	"weekday_short": "Sat",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "10",
+		"moon_phase": "Waxing Gibbous",
+		"moon_icon": "waxinggibbous",
+		"moon_percent_illuminated": 79
+		}
+		,
+		{
+		"length_of_day": "11h 22m",
+		"length_of_night": "12h 38m",
+		"length_of_twilight": "12h 14m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 22,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1425220768,
+	"pretty": "6:39 AM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 06:39:28 -0800",
+	"iso8601": "2015-03-01T06:39:28-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 6,
+	"min": "39",
+	"sec": 28,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425261714,
+	"pretty": "6:01 PM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 18:01:54 -0800",
+	"iso8601": "2015-03-01T18:01:54-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 18,
+	"min": "01",
+	"sec": 54,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1425219197,
+	"pretty": "6:13 AM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 06:13:17 -0800",
+	"iso8601": "2015-03-01T06:13:17-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 6,
+	"min": "13",
+	"sec": 17,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425263286,
+	"pretty": "6:28 PM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 18:28:06 -0800",
+	"iso8601": "2015-03-01T18:28:06-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 18,
+	"min": "28",
+	"sec": 6,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1425249900,
+	"pretty": "2:45 PM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 14:45:00 -0800",
+	"iso8601": "2015-03-01T14:45:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 14,
+	"min": "45",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1425211380,
+	"pretty": "4:03 AM PST on March 01, 2015",
+	"rfc822": "Sun, 01 Mar 2015 04:03:00 -0800",
+	"iso8601": "2015-03-01T04:03:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 1,
+	"yday": 59,
+	"hour": 4,
+	"min": "03",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Sunday",
+	"weekday_short": "Sun",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "11",
+		"moon_phase": "Waxing Gibbous",
+		"moon_icon": "waxinggibbous",
+		"moon_percent_illuminated": 86
+		}
+		,
+		{
+		"length_of_day": "11h 24m",
+		"length_of_night": "12h 36m",
+		"length_of_twilight": "12h 17m",
+		"length_of_day_diff_nextday": {
+		"minutes": 2,
+		"seconds": 23,
+		"sign": "+"
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1425307085,
+	"pretty": "6:38 AM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 06:38:05 -0800",
+	"iso8601": "2015-03-02T06:38:05-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 6,
+	"min": "38",
+	"sec": 5,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425348173,
+	"pretty": "6:02 PM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 18:02:53 -0800",
+	"iso8601": "2015-03-02T18:02:53-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 18,
+	"min": "02",
+	"sec": 53,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1425305516,
+	"pretty": "6:11 AM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 06:11:56 -0800",
+	"iso8601": "2015-03-02T06:11:56-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 6,
+	"min": "11",
+	"sec": 56,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425349744,
+	"pretty": "6:29 PM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 18:29:04 -0800",
+	"iso8601": "2015-03-02T18:29:04-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 18,
+	"min": "29",
+	"sec": 4,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1425339540,
+	"pretty": "3:39 PM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 15:39:00 -0800",
+	"iso8601": "2015-03-02T15:39:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 15,
+	"min": "39",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1425300120,
+	"pretty": "4:42 AM PST on March 02, 2015",
+	"rfc822": "Mon, 02 Mar 2015 04:42:00 -0800",
+	"iso8601": "2015-03-02T04:42:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 2,
+	"yday": 60,
+	"hour": 4,
+	"min": "42",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Monday",
+	"weekday_short": "Mon",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "12",
+		"moon_phase": "Waxing Gibbous",
+		"moon_icon": "waxinggibbous",
+		"moon_percent_illuminated": 92
+		}
+		,
+		{
+		"length_of_day": "11h 27m",
+		"length_of_night": "12h 33m",
+		"length_of_twilight": "12h 19m",
+		"length_of_day_diff_nextday": {
+		"minutes": null,
+		"seconds": null,
+		"sign": ""
+		},
+		"sunrise": {
+		"date": {
+	"epoch": 1425393401,
+	"pretty": "6:36 AM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 06:36:41 -0800",
+	"iso8601": "2015-03-03T06:36:41-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 6,
+	"min": "36",
+	"sec": 41,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"sunset": {
+		"date": {
+	"epoch": 1425434632,
+	"pretty": "6:03 PM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 18:03:52 -0800",
+	"iso8601": "2015-03-03T18:03:52-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 18,
+	"min": "03",
+	"sec": 52,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunrise": {
+		"date": {
+	"epoch": 1425391834,
+	"pretty": "6:10 AM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 06:10:34 -0800",
+	"iso8601": "2015-03-03T06:10:34-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 6,
+	"min": "10",
+	"sec": 34,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"civilSunset": {
+		"date": {
+	"epoch": 1425436201,
+	"pretty": "6:30 PM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 18:30:01 -0800",
+	"iso8601": "2015-03-03T18:30:01-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 18,
+	"min": "30",
+	"sec": 1,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonrise": {
+		"date": {
+	"epoch": 1425429180,
+	"pretty": "4:33 PM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 16:33:00 -0800",
+	"iso8601": "2015-03-03T16:33:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 16,
+	"min": "33",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "PM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moonset": {
+		"date": {
+	"epoch": 1425388680,
+	"pretty": "5:18 AM PST on March 03, 2015",
+	"rfc822": "Tue, 03 Mar 2015 05:18:00 -0800",
+	"iso8601": "2015-03-03T05:18:00-0800",
+	"year": 2015,
+	"month": 3,
+	"day": 3,
+	"yday": 61,
+	"hour": 5,
+	"min": "18",
+	"sec": 0,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Tuesday",
+	"weekday_short": "Tue",
+	"ampm": "AM",
+	"tz_short": "PST",
+	"tz_long": "America/Los_Angeles",
+	"tz_offset_text": "-0800",
+	"tz_offset_hours": -8.00
+}
+		},
+		"moon_age": "13",
+		"moon_phase": "Waxing Gibbous",
+		"moon_icon": "waxinggibbous",
+		"moon_percent_illuminated": 97
+		}
+	],
+  "hemisphere":"North",
+  "moon_phases": [
+  {
+  "date": {
+	"epoch": 1424884504,
+	"pretty": "12:15 PM EST on February 25, 2015",
+	"rfc822": "Wed, 25 Feb 2015 12:15:04 -0500",
+	"iso8601": "2015-02-25T12:15:04-0500",
+	"year": 2015,
+	"month": 2,
+	"day": 25,
+	"yday": 55,
+	"hour": 12,
+	"min": "15",
+	"sec": 4,
+	"monthname": "February",
+	"monthname_short": "Feb",
+	"weekday": "Wednesday",
+	"weekday_short": "Wed",
+	"ampm": "PM",
+	"tz_short": "EST",
+	"tz_long": "America/New_York",
+	"tz_offset_text": "-0500",
+	"tz_offset_hours": -5.00
+},
+  "moon_age": 8,
+  "moon_phase": "First Quarter"
+  }
+  ,
+  {
+  "date": {
+	"epoch": 1425578794,
+	"pretty": "1:06 PM EST on March 05, 2015",
+	"rfc822": "Thu, 05 Mar 2015 13:06:34 -0500",
+	"iso8601": "2015-03-05T13:06:34-0500",
+	"year": 2015,
+	"month": 3,
+	"day": 5,
+	"yday": 63,
+	"hour": 13,
+	"min": "06",
+	"sec": 34,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Thursday",
+	"weekday_short": "Thu",
+	"ampm": "PM",
+	"tz_short": "EST",
+	"tz_long": "America/New_York",
+	"tz_offset_text": "-0500",
+	"tz_offset_hours": -5.00
+},
+  "moon_age": 16,
+  "moon_phase": "Full"
+  }
+  ,
+  {
+  "date": {
+	"epoch": 1426268969,
+	"pretty": "1:49 PM EDT on March 13, 2015",
+	"rfc822": "Fri, 13 Mar 2015 13:49:29 -0400",
+	"iso8601": "2015-03-13T13:49:29-0400",
+	"year": 2015,
+	"month": 3,
+	"day": 13,
+	"yday": 71,
+	"hour": 13,
+	"min": "49",
+	"sec": 29,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "PM",
+	"tz_short": "EDT",
+	"tz_long": "America/New_York",
+	"tz_offset_text": "-0400",
+	"tz_offset_hours": -4.00
+},
+  "moon_age": 23,
+  "moon_phase": "Last Quarter"
+  }
+  ,
+  {
+  "date": {
+	"epoch": 1426844319,
+	"pretty": "5:38 AM EDT on March 20, 2015",
+	"rfc822": "Fri, 20 Mar 2015 05:38:39 -0400",
+	"iso8601": "2015-03-20T05:38:39-0400",
+	"year": 2015,
+	"month": 3,
+	"day": 20,
+	"yday": 78,
+	"hour": 5,
+	"min": "38",
+	"sec": 39,
+	"monthname": "March",
+	"monthname_short": "Mar",
+	"weekday": "Friday",
+	"weekday_short": "Fri",
+	"ampm": "AM",
+	"tz_short": "EDT",
+	"tz_long": "America/New_York",
+	"tz_offset_text": "-0400",
+	"tz_offset_hours": -4.00
+},
+  "moon_age": 1,
+  "moon_phase": "New"
+  }
+  ]
+}
+		,
+"labels": {
+	"not_available": {
+	 "label": "Not available."
+	},
+	"place": {
+		"label": "Place"
+	},
+	"elevation": {
+	 "abbrev": "Elev",
+  "label": "Elevation",
+  "units": "ft"
+	},
+	"temperature": {
+		"abbrev": "Temp.",
+		"label": "Temperature",
+	 "units_nosymbol": "F",
+		"units": "&deg;F"
+	},
+	"feelslike": {
+	 "label": "Feels Like",
+	 "units_nosymbol": "F",
+	 "units": "&deg;F"
+	},
+	"windchill": {
+	 "label": "Wind Chill",
+		"label": "Temperature",
+	 "units_nosymbol": "F",
+		"units": "&deg;F"
+	},
+	"heatindex": {
+	 "label": "Heat Index",
+		"label": "Temperature",
+	 "units_nosymbol": "F",
+		"units": "&deg;F"
+	},
+	"dewpoint": {
+	 "label": "Dew Point",
+	 "units_nosymbol": "F",
+	 "units": "&deg;F"
+	},
+	"humidity": {
+	 "label": "Humidity",
+	 "units": "%"
+	},
+	"pressure": {
+	 "label": "Pressure",
+	 "units": "in"
+	},
+	"wind": {
+	 "label": "Wind"
+	},
+	"wind_speed": {
+	 "label": "Wind Speed",
+	"separator": "at",
+	 "units": "mph"
+	},
+	"wind_direction": {
+	 "label": "Wind Direction",
+	"separator": "from"
+	},
+	"wind_gust": {
+		"label": "Wind Gust",
+		"units": "mph"
+	},
+	"variable": {
+		"label": "Variable"
+	},
+	"calm": {
+		"label": "Calm"
+	},
+	"moisture": {
+		"label": "Moisture"
+	},
+	"rainfall": {
+		"label": "Rainfall",
+		"units": "in"
+	},
+	"snow_depth": {
+		"label": "Snow Depth",
+		"units": "in"
+	},
+	"visibility": {
+		"label": "Visibility",
+		"units": "miles"
+	},
+	"clouds": {
+		"label": "Clouds"
+	},
+	"health": {
+		"label": "Health"
+	},
+	"air_quality": {
+		"label": "Air Quality"
+	},
+	"flu_tracker": {
+		"label": "Flu Tracker"
+	},
+	"ozone": {
+		"label": "Ozone"
+	},
+	"uv_index": {
+	 "label": "UV Index",
+	 "abbrev": "UV",
+	"separator": "out of"
+	},
+	"pollen": {
+	 "label": "Pollen",
+	"separator": "out of"
+	},
+	"time": {
+		"label": "Time"
+	},
+	"now": {
+	 "label": "Now"
+	},
+	"today": {
+	 "label": "Today"
+	},
+	"tomorrow": {
+	 "label": "Tomorrow"
+	},
+	"tomorrownight": {
+	 "label": "Tomorrow Night"
+	},
+	"sunday": {
+	"abbrev": "Sun",
+	 "label": "Sunday"
+	},
+	"monday": {
+	 "abbrev": "Mon",
+	 "label": "Monday"
+	},
+	"tuesday": {
+	 "abbrev": "Tue",
+	 "label": "Tuesday"
+	},
+	"wednesday": {
+	 "abbrev": "Wed",
+	 "label": "Wednesday"
+	},
+	"thursday": {
+	 "abbrev": "Thu",
+	 "label": "Thursday"
+	},
+	"friday": {
+	 "abbrev": "Fri",
+	 "label": "Friday"
+	},
+	"saturday": {
+	 "abbrev": "Sat",
+	 "label": "Saturday"
+	},
+	"sundaynight": {
+	 "label": "Sunday Night"
+	},
+	"mondaynight": {
+	 "label": "Monday Night"
+	},
+	"tuesdaynight": {
+	 "label": "Tuesday Night"
+	},
+	"wednesdaynight": {
+	 "label": "Wednesday Night"
+	},
+	"thursdaynight": {
+	 "label": "Thursday Night"
+	},
+	"fridaynight": {
+	 "label": "Friday Night"
+	},
+	"saturdaynight": {
+	 "label": "Saturday Night"
+	},
+	"sunrise": {
+	 "label": "Sunrise"
+	},
+	"sunset": {
+	 "label": "Sunset"
+	},
+	"moon": {
+	 "label": "Moon"
+	},
+	"nomoonrise": {
+	 "label": "No Moon Rise"
+	},
+	"nomoonset": {
+	 "label": "No Moon Set"
+	},
+	"weatherstation": {
+	 "label": "Weather Station"
+	},
+	"no_reporting": {
+		"label": "No Stations Reporting"
+	},
+	"pws": {
+		"label": "Personal Weather Station"
+	},
+	"airport": {
+		"label": "Airport"
+	},
+	"updated": {
+	 "label": "Updated"
+	},
+	"source": {
+	 "label": "Source"
+	},
+	"pop": {
+	 "abbrev": "Chance of Precip.",
+	 "label": "chance of precipitation",
+	 "units": "%"
+	},
+	"chancerain": {
+	 "label": "Chance of Rain",
+	 "units": "%"
+	},
+	"chancesnow": {
+	 "label": "Chance of Snow",
+	 "units": "%"
+	},
+	"precipitation": {
+	 "abbrev": "Precip.",
+	 "label": "Precipitation"
+	},
+	"cloudcover": {
+	 "label": "Cloud Cover",
+	 "units": "%"
+	},
+	"conditions": {
+	 "label": "Conditions"
+	},
+	"current_conditions": {
+	 "label": "Current Conditions"
+	},
+	"north": {
+	 "abbrev": "N",
+	 "label": "North"
+	},
+	"east": {
+	 "abbrev": "E",
+	 "label": "East"
+	},
+	"south": {
+	 "abbrev": "S",
+	 "label": "South"
+	},
+	"west": {
+	 "abbrev": "W",
+	 "label": "West"
+	},
+	"distance": {
+		"label": "Distance",
+		"units": "mi"
+	}
+}
+}
+;
+</script>
+<script>
+	(function () {
+		var fromPrefToBoolean = function(pref, default_val) {
+		if (pref === "1" || pref === 1 || pref === "true" || pref === true) {
+		return true;
+		} else if (pref === "0" || pref === 0 || pref === "false" || pref === false) {
+		return false;
+		} else {
+		return default_val;
+		}
+		}
+		wui.build_url = function(options) {
+		var url = '//api-ak.wunderground.com/api/' + options.k;
+		if (options.features) {
+		url += '/' + options.features.join('/');
+	 if ("history" in options.features) { url.replace("/history/","/history_"+wui.date.strftime('%Y%m%d')+"/"); }
+		}
+		if (options.lang) {
+		url += '/lang:' + options.lang;
+		}
+		if (options.units) {
+		url += '/units:' + options.units;
+		}
+		if (options.version) {
+		url += '/v:' + options.version;
+		}
+		if (options.bestfct == 0 || options.bestfct == false) {
+		url += '/bestfct:0';
+		}
+		if (options.bestfct == 1 || options.bestfct == true) {
+		url += '/bestfct:1';
+		}
+		url += '/q/'+ options.query +'.json';
+		url += '?ttl=300';
+		if(options.selected_pws) {
+		url += '&sp=' + options.selected_pws;
+		}
+		return url;
+		}
+		var initScripts = [
+		{
+		load: "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js",
+		complete: function () {
+		if ( window.jQuery && wui.bootstrapped.pageType == "CityPage" ) {
+		//Load API data for city page
+		var prefs = wui.bootstrapped.prefs;
+		var query = 'zmw:' + '94086.1.99999';
+		var selected_pws = wui.bootstrapped.prefs.selected_pws;
+		var citypage_options = {
+		k: 'c991975b7f4186c0',
+		bestfct: fromPrefToBoolean(prefs['EXPFCT'], true),
+		lang: prefs['LangCode'],
+		features: [ 'forecast10day',
+		'hourly10day',
+		'labels',
+		//'conditions',
+		'astronomy10day'],
+		selected_pws: selected_pws,
+		query: query,
+		units: prefs['Units'],
+		version: '2.0'
+		};
+		var url = wui.build_url(citypage_options);
+		var ajaxOptions = {
+		async: true,
+		cache: true,
+		dataType: "jsonp",
+		url: url
+		};
+		wui.api_done = $.ajax(ajaxOptions).done(function(data) {
+		wui.api_data = $.extend({}, wui.api_data, data);
+		});
+		}
+		}
+		},
+		"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js",
+		"//icons.wxug.com/scripts/wui-js/1.6.2/wui.min.js",
+		"//icons.wxug.com/scripts/wui.login.min.js?v=1.3.15",
+		"//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js",
+		"//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js",
+		"//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js",
+		"//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js",
+		"//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.time.min.js",
+		"//icons.wxug.com/scripts/backbone-nested/1.1.2/backbone-nested.min.js",
+		"//icons.wxug.com/scripts/responsive-tables.js",
+		"//icons.wxug.com/scripts/wui-backbone/0.4.12/wui.backbone.min.js",
+		"//icons.wxug.com/scripts/rAF/0.0.1/rAF.min.js",
+		"//icons.wxug.com/scripts/wui-flot/0.1.1/wui.flot.min.js",
+		"//icons.wxug.com/scripts/wui-indexpage/0.1.4/wui.indexpage.min.js",
+		"//icons.wxug.com/scripts/wui-sitewide/0.3.5/wui.sitewide.min.js",
+		];
+		var trackingAndAdsScripts = [
+		"//c.amazon-adsystem.com/aax2/amzn_ads.js",
+		"//triggers1.weather.com/js/?resp_type=kv",
+		"//icons.wxug.com/scripts/wui-ads/0.1.6/wui.ads.min.js",
+		"//widget.uservoice.com/79y2vdG4NAUMuKbt6OfnxQ.js"
+		];
+		function scriptLoader(scripts) {
+		!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",scripts);
+		}
+		//Add usher to global wui namespace/object
+		wui.usher = {
+		scripts: initScripts.concat([]),
+		//Callback for loading ads later on in the page (currently controller.js for CityPage)
+		loadTrackingAndAds: function() {
+		if (wui.usher.loadedTrackingAndAds) {
+		return;
+		}
+		wui.usher.scripts = wui.usher.scripts.concat(trackingAndAdsScripts);
+//	scriptLoader(trackingAndAdsScripts);
+		Modernizr.load(trackingAndAdsScripts);
+		wui.usher.loadedTrackingAndAds = true;
+		},
+		loadedTrackingAndAds: false
+		};
+		// backwards compatibility
+		wui.usher.loadAds = wui.usher.loadTrackingAndAds;
+		//Load all required scripts for page
+//	scriptLoader(initScripts);
+		Modernizr.load(initScripts);
+		wui.usher.loadTrackingAndAds();
+	})();
+</script>
+<script>
+wui.bootstrapped.ajax_favorites = false;
+wui.bootstrapped.favorites = [];
+</script>
+<script>
+wui.bootstrapped.recents = [];
+</script>
+<script>
+wui.bootstrapped.ads = {
+	interval: 120000,
+	enableAdRefresh: 0,
+	ugc: false
+};
+</script>
+<script>
+wui.bootstrapped.citypage = {
+	airports: [
+		{
+		code: "KNUQ"
+		}
+	],
+	photos: [
+		{
+		handle: "Biskitten",
+		title: "Sky on Fire",
+		url: "/wximage/Biskitten/4411",
+		thumb: "//icons.wxug.com/data/wximagenew/b/Biskitten/4411.jpg"
+		}
+		,
+		{
+		handle: "PammiePi",
+		title: "Sunday morning sunrise.jpg",
+		url: "/wximage/PammiePi/123",
+		thumb: "//icons.wxug.com/data/wximagenew/p/PammiePi/123.jpg"
+		}
+		,
+		{
+		handle: "VEM24",
+		title: "cold sunrise.",
+		url: "/wximage/VEM24/9",
+		thumb: "//icons.wxug.com/data/wximagenew/v/VEM24/9.jpg"
+		}
+		,
+		{
+		handle: "Openmike",
+		title: "Warm Day",
+		url: "/wximage/Openmike/383",
+		thumb: "//icons.wxug.com/data/wximagenew/o/Openmike/383.jpg"
+		}
+		,
+		{
+		handle: "backwardguy",
+		title: "Bald Eagle in a Cottonwood",
+		url: "/wximage/backwardguy/2853",
+		thumb: "//icons.wxug.com/data/wximagenew/b/backwardguy/2853.jpg"
+		}
+	],
+	zmw: '94086.1.99999'
+};
+</script>
+<script>
+wui.bootstrapped.indexpage = {
+	geoip: {
+		lat: "37.369701",
+		lon: "-122.021400"
+	},
+	location_found: 1,
+	//wundermap Layers
+	layers: [
+		{
+		layer: "HomePage",
+		active: 1,
+		defaultUI: 0,
+		mode: "temp",
+		stations: {
+		"KCASUNNY4": {
+		"lat": "37.364811",
+		"lon": "-122.012642",
+		"tempf": "59.5"
+		},
+		"KCASUNNY27": {
+		"lat": "37.371052",
+		"lon": "-122.033173",
+		"tempf": "59.5"
+		},
+		"KCASUNNY12": {
+		"lat": "37.384602",
+		"lon": "-122.025574",
+		"tempf": "63.1"
+		},
+		"KCASUNNY36": {
+		"lat": "37.358822",
+		"lon": "-122.036285",
+		"tempf": "60.8"
+		},
+		"KCASANTA435": {
+		"lat": "37.368893",
+		"lon": "-121.999504",
+		"tempf": "68.2"
+		},
+		"KCASUNNY44": {
+		"lat": "37.360794",
+		"lon": "-122.002129",
+		"tempf": "60.6"
+		},
+		"KCASANTA58": {
+		"lat": "37.353394",
+		"lon": "-122.011185",
+		"tempf": "60.8"
+		},
+		"KCASUNNY49": {
+		"lat": "37.353645",
+		"lon": "-122.009720",
+		"tempf": "56.8"
+		},
+		"KCASUNNY37": {
+		"lat": "37.377510",
+		"lon": "-122.047928",
+		"tempf": "59.9"
+		},
+		"KCASUNNY24": {
+		"lat": "37.347191",
+		"lon": "-122.019188",
+		"tempf": "60.6"
+		},
+		"KCASUNNY38": {
+		"lat": "37.392410",
+		"lon": "-122.023293",
+		"tempf": "60.8"
+		},
+		"KCASUNNY47": {
+		"lat": "37.366592",
+		"lon": "-122.050377",
+		"tempf": "58.1"
+		}
+		},
+		selectedStation: "KCASUNNY4"
+		},
+		{
+		layer: "Radar",
+		active: 1,
+		defaultUI: 0,
+		useTiles: true,
+		type: "00Q",
+		type2: "",
+		smooth: 1,
+		animation: {
+		num: 1
+		}
+		}
+	],
+	video: {
+		clipid: '',
+		collid: 'news'
+	}
+};
+</script>
+<script>
+wui.bootstrapped.share = {
+	domain: "www.wunderground.com",
+	category: "Index",
+	page: "Index",
+	title: 'Weather Forecast & Reports - Long Range & Local | Wunderground',
+}
+</script>
+<script>
+	wui.bootstrapped.videos = {
+		play_icon: "//icons.wxug.com/graphics/playBtn.png",
+		title: "Index Video Meat",
+		clipid: '',
+		collid: ''
+	}
+</script>
+		<img src="//www.wunderground.com/tag.php?ViewTarget_1=0.5" style="display: none;" />
+		<img src="//www.wunderground.com/tag.php?ProgGroup_2=720.0" style="display: none;" />
+<script src="//tags.crwdcntrl.net/c/2216/cc.js?ns=_cc2216" id="LOTCC_2216"></script>
+<script>
+		wui.bootstrapped.wu_country_code = "US";
+	if(window.innerWidth > 990) {
+		var ad_unit = "web_wunderground_us";
+		var ad_plat = "wund";
+		var pos_top = "wx_bb, wx_ws";
+		var pos_big = "wx_300var";
+		var pos_box = "wx_300sm";
+		var pos_mid = "wx_mid300";
+		var pos_low = "wx_bot300";
+		var pos_mil = "wx_midldr";
+		var pos_bot = "wx_botldr";
+		var pos_pds = "wx_pds";
+		var pos_tdu = "wx_hsd";
+	}
+	else {
+		var ad_unit = "mobile_smart_wunderground_us";
+		var ad_plat = "wund_mw";
+		var pos_top = "mw_top";
+		var pos_big = "mw_mid1";
+		var pos_box = "mw_mid1";
+		var pos_mid = "null";
+		var pos_low = "mw_mid2";
+		var pos_mil = "null";
+		var pos_bot = "mw_bot";
+		var pos_pds = "null";
+		var pos_tdu = "wx_hmd";
+	}
+		window.combined_hash = {};
+	var utag_data = {
+		ad_placements :[
+		["/7646/"+ad_unit+"/home", [[728,91],[970,66],[970,250],[320,51]], "div-gpt-ad-615639597871654305-top", {"pos": pos_top, "atf": "1"}],
+		["/7646/"+ad_unit+"/home", [[300,600],[300,251],[320,51]], "div-gpt-ad-615639597871654305-1", {"pos": pos_big, "atf": "1",}],
+		["/7646/"+ad_unit+"/home", [[300,251],[320,51]], "div-gpt-ad-615639597871654305-2", {"pos": pos_mid, "atf": "0"}],
+		["/7646/"+ad_unit+"/home", [[728,91],[320,51]], "div-gpt-ad-615639597871654305-3", {"pos": pos_tdu, "atf": "0"}],
+		["/7646/"+ad_unit+"/home", [[310,335],[320,51]], "div-gpt-ad-615639597871654305-4", {"pos": "wx_hsp", "atf": "0"}],
+		],
+		ad_unit : "/7646/"+ad_unit+"/home",
+		preempt : "y",
+		platform : ad_plat,
+		site : "www",
+		layout : "wx_t3wsh",
+		exclude : "wund",
+		page_view : "1",
+		time_frame : "home",
+		twc_location_id : "94086$4",
+		entry : "city",
+		zip_code : "94086",
+		claritas : "4",
+		dma : "807",
+		city : "Sunnyvale",
+		state : "CA",
+		country_code : "US",
+		language : "EN",
+		locale : "EN_US",
+		temperature : "50h",
+		temperature_range : "cool",
+		pollen : "hi",
+		uv : "hi",
+		humidity : "lo",
+		condition : "sun",
+		forecast_high_increment : "60h",
+		forecast_high_range : "cool",
+		forecast_low_increment : "40l",
+		forecast_low_range : "cold",
+		forecast_day_1 : "sun",
+		forecast_day_2 : "clr",
+		forecast_day_3 : "sun",
+		barometer : "fllng",
+		weather_fx : (window['wfxtrigs']) ? wfxtrigs.split("=")[1] : null,
+		ad_bidding : combined_hash,
+		page_name : "HomePage: /home",
+		channel : "HomePage",
+		content_type : "HomePage",
+		sub_section : "HomePage",
+		events : "",
+		search_type : "other",
+		page : "Index",
+		category : "Index",
+		sharing : "internal",
+		member_pws : "0",
+		member_webcam : "0",
+		member_translator : "0",
+		member_approver : "0",
+		member_zealot : "0",
+		member_moderator : "0",
+		member_favorites : "0",
+		member_type : "non-member"
+	}
+</script>
+		<div id="fb-root"></div>
+<div id="fb-pixel" class="none"></div>
+	</body>
+</html>
