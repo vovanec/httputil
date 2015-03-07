@@ -1,5 +1,5 @@
 # httputil
-Various useful functions to work with HTTP data
+Utilities for dealing with HTTP data
 
 Example httputil.read_body_stream() usage:
 ```python
