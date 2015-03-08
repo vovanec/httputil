@@ -1,3 +1,8 @@
+"""Example application.
+"""
+
+__author__ = 'vovanec@gmail.com'
+
 
 import logging
 
@@ -60,7 +65,7 @@ def example_async_client(api_client):
 
     try:
         pprint((yield from api_client.echo()))
-    except errors.APIError as exc:
+    except errors.RequestError as exc:
         log.exception('Exception occurred: %s', exc)
 
     yield gen.Task(lambda *args, **kwargs: ioloop.IOLoop.current().stop())
@@ -79,7 +84,7 @@ def example_sync_client(api_client):
 
     try:
         pprint(api_client.echo())
-    except errors.APIError as exc:
+    except errors.RequestError as exc:
         log.exception('Exception occurred: %s', exc)
 
 

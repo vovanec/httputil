@@ -7,22 +7,22 @@ import ujson
 import http.client
 
 
-class APIError(Exception):
+class RequestError(Exception):
 
-    """Base Web API error."""
-
-
-class CommunicationError(APIError):
-
-    """Communication problem with API server."""
+    """Base request error."""
 
 
-class MalformedResponse(APIError):
+class CommunicationError(RequestError):
+
+    """Communication problem with server."""
+
+
+class MalformedResponse(RequestError):
 
     """Server responded with data which client could not understand."""
 
 
-class HTTPError(APIError):
+class HTTPError(RequestError):
 
     """Server returned HTTP error."""
 
