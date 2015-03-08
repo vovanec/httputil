@@ -9,12 +9,12 @@ import http.client
 
 class APIError(Exception):
 
-    """Base Entitlement API error."""
+    """Base Web API error."""
 
 
 class CommunicationError(APIError):
 
-    """Communication problem with Entitlement API server."""
+    """Communication problem with API server."""
 
 
 class MalformedResponse(APIError):
@@ -24,7 +24,7 @@ class MalformedResponse(APIError):
 
 class HTTPError(APIError):
 
-    """Entitlement API server returned HTTP error."""
+    """Server returned HTTP error."""
 
     def __init__(self, code, response_body=None):
         """Constructor.
