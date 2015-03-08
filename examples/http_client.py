@@ -26,7 +26,6 @@ class SyncAPIClient(object):
     def __init__(self, connect_timeout=DEF_CONNECT_TIMEOUT,
                  request_timeout=DEF_REQUEST_TIMEOUT,
                  connection_retries=DEF_NUM_RETRIES):
-
         """Constructor.
         """
 
@@ -43,7 +42,6 @@ class AsyncAPIClient(object):
     def __init__(self, connect_timeout=DEF_CONNECT_TIMEOUT,
                  request_timeout=DEF_REQUEST_TIMEOUT,
                  connection_retries=DEF_NUM_RETRIES):
-
         """Constructor.
         """
 

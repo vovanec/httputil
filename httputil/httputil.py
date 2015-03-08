@@ -26,6 +26,7 @@ DECOMPRESSOR_FACTORIES = {
 
 
 class BodyStreamError(Exception):
+
     """Exception of this class is raised when HTTP stream could not be read.
     """
 
@@ -33,6 +34,7 @@ class BodyStreamError(Exception):
 
 
 class DechunkError(BodyStreamError):
+
     """Raised when could not de-chunk stream.
     """
 
@@ -40,6 +42,7 @@ class DechunkError(BodyStreamError):
 
 
 class DecompressError(BodyStreamError):
+
     """Raised when could not decompress stream.
     """
 
