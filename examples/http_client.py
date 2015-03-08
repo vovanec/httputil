@@ -5,9 +5,9 @@ from pprint import pprint
 from tornado import gen
 from tornado import ioloop
 
-from httputil.request_engine import async_engine
-from httputil.request_engine import sync_engine
-from httputil.request_engine import errors
+from httputil.request_engines import async
+from httputil.request_engines import sync
+from httputil.request_engines import errors
 
 
 DEF_REQUEST_TIMEOUT = 10
@@ -30,7 +30,7 @@ class SyncAPIClient(object):
         """Constructor.
         """
 
-        self._engine = sync_engine.SyncRequestEngine(
+        self._engine = sync.SyncRequestEngine(
             API_BASE_URL, connect_timeout, request_timeout, connection_retries)
 
     def echo(self):
@@ -47,7 +47,7 @@ class AsyncAPIClient(object):
         """Constructor.
         """
 
-        self._engine = async_engine.AsyncRequestEngine(
+        self._engine = async.AsyncRequestEngine(
             API_BASE_URL, connect_timeout, request_timeout, connection_retries)
 
     def echo(self, callback=None):

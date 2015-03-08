@@ -18,9 +18,9 @@ import tornado.testing
 import tornado.httpclient
 import tornado.curl_httpclient
 
-from httputil.request_engine import async_engine
-from httputil.request_engine import errors
-from httputil.request_engine import sync_engine
+from httputil.request_engines import async
+from httputil.request_engines import errors
+from httputil.request_engines import sync
 
 
 CURL_ERROR = 599
@@ -47,7 +47,7 @@ class TestSyncClient(unittest.TestCase):
         self.addCleanup(self.mock.tear_down)
         self.mock_request = self.mock.stub_method(
             requests.Session, 'request')(vmock.matchers.any_args())
-        self._engine = sync_engine.SyncRequestEngine(BASE_URL, 3, 3, None)
+        self._engine = sync.SyncRequestEngine(BASE_URL, 3, 3, None)
 
     def test_ok(self):
 
@@ -138,7 +138,7 @@ class TestAsyncClient(tornado.testing.AsyncTestCase):
         self.mock_fetch_impl = self.mock.stub_method(
             tornado.curl_httpclient.CurlAsyncHTTPClient, 'fetch_impl')
 
-        self._engine = async_engine.AsyncRequestEngine(BASE_URL, 3, 3, None)
+        self._engine = async.AsyncRequestEngine(BASE_URL, 3, 3, None)
 
     @tornado.testing.gen_test
     def test_ok(self):
@@ -208,7 +208,7 @@ class TestAsyncClientWithCallback(tornado.testing.AsyncTestCase):
         self.mock_fetch_impl = self.mock.stub_method(
             tornado.curl_httpclient.CurlAsyncHTTPClient, 'fetch_impl')
 
-        self._engine = async_engine.AsyncRequestEngine(BASE_URL, 3, 3, None)
+        self._engine = async.AsyncRequestEngine(BASE_URL, 3, 3, None)
 
     def test_ok(self):
 

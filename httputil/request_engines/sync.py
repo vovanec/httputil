@@ -9,7 +9,7 @@ import requests.models
 import time
 import ujson
 
-from .base_engine import BaseRequestEngine
+from .base import BaseRequestEngine
 from .errors import ClientError
 from .errors import CommunicationError
 from .errors import MalformedResponse

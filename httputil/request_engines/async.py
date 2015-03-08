@@ -8,7 +8,7 @@ from tornado import curl_httpclient
 from tornado import gen
 from tornado import httpclient
 
-from .base_engine import BaseRequestEngine
+from .base import BaseRequestEngine
 from .errors import ClientError
 from .errors import CommunicationError
 from .errors import MalformedResponse
