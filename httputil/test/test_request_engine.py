@@ -1,8 +1,6 @@
 """Request engine unit tests.
 
 These tests require VMock library to be installed.
-Install it with the following command:
-pip3 install --upgrade git+https://github.com/vburenin/vmock.git
 """
 
 __author__ = 'vovanec@gmail.com'
