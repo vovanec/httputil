@@ -16,9 +16,6 @@ from .errors import MalformedResponse
 from .errors import ServerError
 
 
-SUPPORTED_PROTOCOLS = {'http'}
-
-
 class SyncRequestEngine(BaseRequestEngine):
 
     """Synchronous request engine.
@@ -57,14 +54,27 @@ class SyncRequestEngine(BaseRequestEngine):
         retries_left = self._conn_retries
 
         while True:
-            s = requests.Session()
+            s = self._make_session()
             try:
-                for protocol in SUPPORTED_PROTOCOLS:
-                    s.mount('%s://' % (protocol,),
-                            requests.adapters.HTTPAdapter(max_retries=False))
+                cert = None
+                if self._client_cert and self._client_key:
+                    cert = (self._client_cert, self._client_key)
+                elif self._client_cert:
+                    cert = self._client_cert
+
+                verify = self._ca_certs
+                if self._ca_certs is not None:
+                    verify = self._verify_cert
+
+                auth = None
+                if self._username and self._password:
+                    auth = (self._username, self._password)
 
                 response = s.request(method, url, data=data,
-                                     timeout=self._connect_timeout)
+                                     timeout=self._connect_timeout,
+                                     cert=cert,
+                                     verify=verify,
+                                     auth=auth)
                 """:type: requests.models.Response
                 """
                 if 400 <= response.status_code < 500:
@@ -92,3 +102,11 @@ class SyncRequestEngine(BaseRequestEngine):
                     continue
             finally:
                 s.close()
+
+    @staticmethod
+    def _make_session():
+
+        sess = requests.Session()
+        sess.mount('http://', requests.adapters.HTTPAdapter(max_retries=False))
+        sess.mount('https://', requests.adapters.HTTPAdapter(max_retries=False))
+        return sess

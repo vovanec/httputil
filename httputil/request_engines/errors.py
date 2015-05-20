@@ -2,8 +2,6 @@
 
 __author__ = 'vovanec@gmail.com'
 
-import logging
-import ujson
 import http.client
 
 
@@ -31,20 +29,13 @@ class HTTPError(RequestError):
 
         :param int code: HTTP code.
         :param str response_body: HTTP response body.
-
         """
 
         self.code = code
-        message = http.client.responses.get(code, 'Unknown')
-        if response_body:
-            try:
-                message = ujson.loads(response_body)['message']
-            except (ValueError, TypeError, KeyError) as err:
-                logging.getLogger(
-                    self.__class__.__name__).error(
-                    'Could not decode error JSON body: %s', err)
+        self.body = response_body
 
-        super().__init__('HTTP %d: %s' % (self.code, message))
+        super().__init__('HTTP %d: %s' % (
+            self.code, self.body or http.client.responses.get(code, 'Unknown')))
 
 
 class ClientError(HTTPError):
