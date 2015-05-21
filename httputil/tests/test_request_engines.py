@@ -5,7 +5,7 @@ These tests require VMock library to be installed.
 
 __author__ = 'vovanec@gmail.com'
 
-import ujson
+import json
 import http.client
 import unittest
 import vmock
@@ -52,10 +52,11 @@ class TestSyncClient(unittest.TestCase):
     def test_ok(self):
 
         expected = {'status': 'ok'}
-        response = FakeReposne(http.client.OK, ujson.dumps(expected))
+        response = FakeReposne(http.client.OK, json.dumps(expected))
 
         self.mock_request.returns(response)
-        self.assertDictEqual(self._engine.request('/blah'), expected)
+        self.assertDictEqual(
+            self._engine.request('/blah', result_callback=json.loads), expected)
 
     def test_malformed_response(self):
 
@@ -63,17 +64,17 @@ class TestSyncClient(unittest.TestCase):
         self.mock_request.returns(response)
 
         with self.assertRaises(errors.MalformedResponse):
-            self._engine.request('/blah')
+            self._engine.request('/blah', result_callback=json.loads)
 
     def test_http_client_error(self):
 
         response = FakeReposne(
             http.client.BAD_REQUEST,
-            ujson.dumps({'message': 'Data not found'}))
+            json.dumps({'message': 'Data not found'}))
         self.mock_request.returns(response)
 
         with self.assertRaises(errors.ClientError):
-            self._engine.request('/blah')
+            self._engine.request('/blah', result_callback=json.loads)
 
     def test_http_server_error(self):
 
@@ -81,7 +82,7 @@ class TestSyncClient(unittest.TestCase):
         self.mock_request.returns(response)
 
         with self.assertRaises(errors.ServerError):
-            self._engine.request('/blah')
+            self._engine.request('/blah', result_callback=json.loads)
 
     def test_communication_error(self):
 
@@ -89,7 +90,7 @@ class TestSyncClient(unittest.TestCase):
             requests.exceptions.RequestException('No route to host'))
 
         with self.assertRaises(errors.CommunicationError):
-            self._engine.request('/blah')
+            self._engine.request('/blah', result_callback=json.loads)
 
 
 class FakeHTTPResponse(object):
@@ -146,9 +147,10 @@ class TestAsyncClient(tornado.testing.AsyncTestCase):
         expected = {'status': 'ok'}
         self.mock_fetch_impl(
             vmock.matchers.any_args()).does(
-            make_fetch_impl(http.client.OK, ujson.dumps(expected)))
+            make_fetch_impl(http.client.OK, json.dumps(expected)))
 
-        response = yield from self._engine.request('/blah')
+        response = yield from self._engine.request(
+            '/blah', result_callback=json.loads)
         self.assertDictEqual(response, expected)
 
     @tornado.testing.gen_test
@@ -159,19 +161,20 @@ class TestAsyncClient(tornado.testing.AsyncTestCase):
             make_fetch_impl(http.client.OK, '--asdasd---'))
 
         with self.assertRaises(errors.MalformedResponse):
-            yield from self._engine.request('/blah')
+            yield from self._engine.request('/blah', result_callback=json.loads)
 
     @tornado.testing.gen_test
     def test_client_error(self):
 
-        error_body = ujson.dumps({'message': 'Method not found'})
+        error_body = json.dumps({'message': 'Method not found'})
 
         self.mock_fetch_impl(
             vmock.matchers.any_args()).does(
             make_fetch_impl(http.client.NOT_FOUND, error_body))
 
         with self.assertRaises(errors.ClientError):
-            yield from self._engine.request('/blah')
+            yield from self._engine.request(
+                '/blah', result_callback=json.loads)
 
     @tornado.testing.gen_test
     def test_server_error(self):
@@ -181,7 +184,7 @@ class TestAsyncClient(tornado.testing.AsyncTestCase):
             make_fetch_impl(http.client.SERVICE_UNAVAILABLE))
 
         with self.assertRaises(errors.ServerError):
-            yield from self._engine.request('/blah')
+            yield from self._engine.request('/blah', result_callback=json.loads)
 
     @tornado.testing.gen_test
     def test_communication_error(self):
@@ -191,92 +194,7 @@ class TestAsyncClient(tornado.testing.AsyncTestCase):
             make_fetch_impl(CURL_ERROR, 'No route to host'))
 
         with self.assertRaises(errors.CommunicationError):
-            yield from self._engine.request('/blah')
-
-
-class TestAsyncClientWithCallback(tornado.testing.AsyncTestCase):
-
-    """Test asynchronous client(callback style)."""
-
-    def setUp(self):
-
-        super().setUp()
-
-        self.mock = vmock.VMock()
-        self.addCleanup(self.mock.tear_down)
-
-        self.mock_fetch_impl = self.mock.stub_method(
-            tornado.curl_httpclient.CurlAsyncHTTPClient, 'fetch_impl')
-
-        self._engine = async.AsyncRequestEngine(BASE_URL, 3, 3, None)
-
-    def test_ok(self):
-
-        expected = {'status': 'ok'}
-        self.mock_fetch_impl(
-            vmock.matchers.any_args()).does(
-            make_fetch_impl(http.client.OK, ujson.dumps(expected)))
-
-        def cb(response):
-            self.assertDictEqual(response, expected)
-            self.stop()
-
-        self._engine.request('/blah', callback=cb)
-        self.wait()
-
-    def test_malformed_response(self):
-
-        self.mock_fetch_impl(
-            vmock.matchers.any_args()).does(
-            make_fetch_impl(http.client.OK, '--asdasd---'))
-
-        def cb(response):
-            self.assertIsInstance(response, errors.MalformedResponse)
-            self.stop()
-
-        self._engine.request('/blah', callback=cb)
-        self.wait()
-
-    def test_client_error(self):
-
-        error_body = ujson.dumps({'message': 'Method not found'})
-
-        self.mock_fetch_impl(
-            vmock.matchers.any_args()).does(
-            make_fetch_impl(http.client.NOT_FOUND, error_body))
-
-        def cb(response):
-            self.assertIsInstance(response, errors.ClientError)
-            self.stop()
-
-        self._engine.request('/blah', callback=cb)
-        self.wait()
-
-    def test_server_error(self):
-
-        self.mock_fetch_impl(
-            vmock.matchers.any_args()).does(
-            make_fetch_impl(http.client.SERVICE_UNAVAILABLE))
-
-        def cb(response):
-            self.assertIsInstance(response, errors.ServerError)
-            self.stop()
-
-        self._engine.request('/blah', callback=cb)
-        self.wait()
-
-    def test_communication_error(self):
-
-        self.mock_fetch_impl(
-            vmock.matchers.any_args()).does(
-            make_fetch_impl(CURL_ERROR, 'No route to host'))
-
-        def cb(response):
-            self.assertIsInstance(response, errors.CommunicationError)
-            self.stop()
-
-        self._engine.request('/blah', callback=cb)
-        self.wait()
+            yield from self._engine.request('/blah', result_callback=json.loads)
 
 
 if __name__ == '__main__':

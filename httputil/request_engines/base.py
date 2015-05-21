@@ -41,12 +41,15 @@ class BaseRequestEngine(object):
 
         self._log = logging.getLogger(self.__class__.__name__)
 
-    def request(self, url, *, method='GET', data=None, **kwargs):
+    def request(self, url, *,
+                method='GET', headers=None, data=None, result_callback=None):
         """Perform request.
 
         :param str url: request URL.
         :param str method: request method.
-        :param object data: JSON-encodable object.
+        :param dict headers: request headers.
+        :param object data: request data.
+        :param object -> object result_callback: result callback.
 
         :rtype: dict
         :raise: APIError
@@ -54,15 +57,20 @@ class BaseRequestEngine(object):
         """
 
         url = self._api_base_url + url
-        self._log.debug('Performing %s request to URL %s', method, url)
-        return self._request(url, method=method, data=data, **kwargs)
+        self._log.debug('Performing %s request to %s', method, url)
 
-    def _request(self, url, *, method='GET', data=None, **kwargs):
+        return self._request(url, method=method, headers=headers, data=data,
+                             result_callback=result_callback)
+
+    def _request(self, url, *,
+                 method='GET', headers=None, data=None, result_callback=None):
         """Perform request. Subclasses must implement this.
 
         :param str url: request URL.
         :param str method: request method.
-        :param object data: JSON-encodable object.
+        :param dict headers: request headers.
+        :param object data: request data.
+        :param object -> object result_callback: result callback.
 
         :rtype: dict
         :raise: APIError

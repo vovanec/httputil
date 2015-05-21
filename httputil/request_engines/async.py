@@ -2,7 +2,6 @@
 
 __author__ = 'vovanec@gmail.com'
 
-import ujson
 
 from tornado import curl_httpclient
 from tornado import gen
@@ -54,69 +53,21 @@ class AsyncRequestEngine(BaseRequestEngine):
 
         self._client = httpclient.AsyncHTTPClient()
 
-    def _request(self, url, *, method='GET', data=None, callback=None):
+    def _request(self, url, *,
+                 method='GET', headers=None, data=None, result_callback=None):
         """Perform asynchronous request.
 
         :param str url: request URL.
         :param str method: request method.
+        :param dict headers: request headers.
         :param object data: JSON-encodable object.
-        :param object -> None callback: finish callback
+        :param object -> object result_callback: result callback.
 
         :rtype: dict
         :raise: APIError
-
         """
 
-        request = self._prepare_request(url, method, data)
-        if callback is not None:
-            return self._request_with_callback(request, callback)
-
-        return self._request_with_coroutine(request)
-
-    def _request_with_callback(self, request, callback):
-        """Asynchronous request with callback.
-
-        :param httpclient.HTTPRequest request: HTTP request
-        :param object -> None callback: finish callback
-
-        :raise: APIError
-
-        """
-
-        if self._conn_retries is not None:
-            self._log.debug('Error retries don\'t are not yet supported '
-                            'with callback interface.')
-
-        def handle_response(resp):
-
-            if isinstance(resp.error, httpclient.HTTPError):
-                resp_body = resp.body if resp is not None else None
-                if resp.error.code == 599:
-                    callback(CommunicationError(resp.error))
-                elif 400 <= resp.error.code < 500:
-                    callback(ClientError(resp.code, resp_body))
-                else:
-                    callback(ServerError(resp.code, resp_body))
-            else:
-                try:
-                    result = ujson.loads(resp.body)
-                except (ValueError, TypeError) as err:
-                    self._log.warning('Could not decode JSON body: %s', err)
-                    result = MalformedResponse(err)
-
-                callback(result)
-
-        self._client.fetch(request, callback=handle_response)
-
-    def _request_with_coroutine(self, request):
-        """Asynchronous request using coroutine.
-
-        :param httpclient.HTTPRequest request: HTTP request
-
-        :rtype: dict
-        :raise: APIError
-
-        """
+        request = self._prepare_request(url, method, headers, data)
 
         retries_left = self._conn_retries
 
@@ -124,9 +75,13 @@ class AsyncRequestEngine(BaseRequestEngine):
             try:
                 response = yield self._client.fetch(request)
                 try:
-                    return ujson.loads(response.body)
+                    if result_callback:
+                        return result_callback(response.body)
                 except (ValueError, TypeError) as err:
                     raise MalformedResponse(err) from None
+
+                return response.body
+
             except httpclient.HTTPError as err:
                 resp_body = err.response.body \
                     if err.response is not None else None
@@ -146,18 +101,18 @@ class AsyncRequestEngine(BaseRequestEngine):
 
                 raise ServerError(err.code, resp_body) from None
 
-    def _prepare_request(self, url, method, data):
+    def _prepare_request(self, url, method, headers, data):
         """Prepare HTTP request.
 
         :param str url: request URL.
         :param str method: request method.
+        :param dict headers: request headers.
         :param object data: JSON-encodable object.
 
         :rtype: httpclient.HTTPRequest
 
         """
 
-        headers = {'Content-Type': 'application/json'}
         request = httpclient.HTTPRequest(
             url=url, method=method, headers=headers, body=data,
             connect_timeout=self._connect_timeout,

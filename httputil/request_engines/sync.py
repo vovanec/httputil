@@ -7,7 +7,6 @@ import requests.adapters
 import requests.exceptions
 import requests.models
 import time
-import ujson
 
 from .base import BaseRequestEngine
 from .errors import ClientError
@@ -49,17 +48,17 @@ class SyncRequestEngine(BaseRequestEngine):
             client_cert=client_cert, client_key=client_key,
             verify_cert=verify_cert, ca_certs=ca_certs)
 
-    def _request(self, url, *, method='GET', data=None, **kwargs):
+    def _request(self, url, *,
+                 method='GET', headers=None, data=None, result_callback=None):
         """Perform synchronous request.
 
         :param str url: request URL.
         :param str method: request method.
         :param object data: JSON-encodable object.
-        :param object -> None callback: finish callback
+        :param object -> object result_callback: result callback.
 
         :rtype: dict
         :raise: APIError
-
         """
 
         retries_left = self._conn_retries
@@ -99,9 +98,12 @@ class SyncRequestEngine(BaseRequestEngine):
                         response.status_code, response.content)
 
                 try:
-                    return ujson.loads(response.content)
+                    if result_callback:
+                        return result_callback(response.content)
                 except (ValueError, TypeError) as err:
                     raise MalformedResponse(err) from None
+
+                return response.content
 
             except (requests.exceptions.RequestException,
                     requests.exceptions.BaseHTTPError) as exc:
@@ -119,8 +121,13 @@ class SyncRequestEngine(BaseRequestEngine):
 
     @staticmethod
     def _make_session():
+        """Create session object.
+
+        :rtype: requests.Session
+        """
 
         sess = requests.Session()
         sess.mount('http://', requests.adapters.HTTPAdapter(max_retries=False))
         sess.mount('https://', requests.adapters.HTTPAdapter(max_retries=False))
+
         return sess

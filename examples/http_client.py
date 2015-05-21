@@ -3,7 +3,7 @@
 
 __author__ = 'vovanec@gmail.com'
 
-
+import json
 import logging
 
 from pprint import pprint
@@ -24,6 +24,7 @@ log = logging.getLogger('http_client')
 
 API_BASE_URL = 'http://echo.jsontest.com'
 ECHO_URL = '/key/value/one/two'
+HEADERS = {'Content-Type': 'application/json'}
 
 
 class SyncAPIClient(object):
@@ -39,7 +40,8 @@ class SyncAPIClient(object):
 
     def echo(self):
 
-        return self._engine.request(ECHO_URL)
+        return self._engine.request(ECHO_URL, headers=HEADERS,
+                                    result_callback=lambda res: json.loads(res))
 
 
 class AsyncAPIClient(object):
@@ -53,14 +55,15 @@ class AsyncAPIClient(object):
         self._engine = async.AsyncRequestEngine(
             API_BASE_URL, connect_timeout, request_timeout, connection_retries)
 
-    def echo(self, callback=None):
+    def echo(self):
 
-        return self._engine.request(ECHO_URL, callback=callback)
+        return self._engine.request(ECHO_URL, headers=HEADERS,
+                                    result_callback=lambda res: json.loads(res))
 
 
 @gen.coroutine
 def example_async_client(api_client):
-    """Example async client use with coroutines.
+    """Example async client.
     """
 
     try:
@@ -69,13 +72,6 @@ def example_async_client(api_client):
         log.exception('Exception occurred: %s', exc)
 
     yield gen.Task(lambda *args, **kwargs: ioloop.IOLoop.current().stop())
-
-
-def example_async_client_with_cb(api_client):
-    """Example async client use with callbacks.
-    """
-
-    api_client.echo(callback=pprint)
 
 
 def example_sync_client(api_client):
@@ -95,7 +91,6 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     example_sync_client(SyncAPIClient())
-    example_async_client_with_cb(AsyncAPIClient())
     example_async_client(AsyncAPIClient())
 
     io_loop = ioloop.IOLoop.current()
