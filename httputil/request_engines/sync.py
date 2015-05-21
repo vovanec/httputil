@@ -25,7 +25,9 @@ class SyncRequestEngine(BaseRequestEngine):
     """
 
     def __init__(self, api_base_url, connect_timeout, request_timeout,
-                 conn_retries):
+                 conn_retries, username=None, password=None,
+                 client_cert=None, client_key=None, verify_cert=True,
+                 ca_certs=None):
         """Constructor.
 
         :param str api_base_url: API base URL.
@@ -33,10 +35,19 @@ class SyncRequestEngine(BaseRequestEngine):
         :param int request_timeout: request timeout.
         :param int|None conn_retries: The number of retries on connection
                error. If None - no retries.
+        :param str|None username: auth username.
+        :param str|None password: auth password.
+        :param str|None client_cert: client certificate.
+        :param str|None client_key: client key.
+        :param bool verify_cert: whether to verify server cert.
+        :param str|None ca_certs: path to CA certificate chain.
         """
 
         super().__init__(
-            api_base_url, connect_timeout, request_timeout, conn_retries)
+            api_base_url, connect_timeout, request_timeout, conn_retries,
+            username=username, password=password,
+            client_cert=client_cert, client_key=client_key,
+            verify_cert=verify_cert, ca_certs=ca_certs)
 
     def _request(self, url, *, method='GET', data=None, **kwargs):
         """Perform synchronous request.
@@ -62,9 +73,12 @@ class SyncRequestEngine(BaseRequestEngine):
                 elif self._client_cert:
                     cert = self._client_cert
 
-                verify = self._ca_certs
-                if self._ca_certs is not None:
-                    verify = self._verify_cert
+                if self._verify_cert:
+                    verify = True
+                    if self._ca_certs:
+                        verify = self._ca_certs
+                else:
+                    verify = False
 
                 auth = None
                 if self._username and self._password:

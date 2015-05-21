@@ -28,7 +28,9 @@ class AsyncRequestEngine(BaseRequestEngine):
     """
 
     def __init__(self, api_base_url, connect_timeout, request_timeout,
-                 conn_retries):
+                 conn_retries, username=None, password=None,
+                 client_cert=None, client_key=None, verify_cert=True,
+                 ca_certs=None):
         """Constructor.
 
         :param str api_base_url: API base URL.
@@ -36,10 +38,19 @@ class AsyncRequestEngine(BaseRequestEngine):
         :param int request_timeout: request timeout.
         :param int|None conn_retries: The number of retries on connection
                error. If None - no retries.
+        :param str|None username: auth username.
+        :param str|None password: auth password.
+        :param str|None client_cert: client certificate.
+        :param str|None client_key: client key.
+        :param bool verify_cert: whether to verify server cert.
+        :param str|None ca_certs: path to CA certificate chain.
         """
 
         super().__init__(
-            api_base_url, connect_timeout, request_timeout, conn_retries)
+            api_base_url, connect_timeout, request_timeout, conn_retries,
+            username=username, password=password,
+            client_cert=client_cert, client_key=client_key,
+            verify_cert=verify_cert, ca_certs=ca_certs)
 
         self._client = httpclient.AsyncHTTPClient()
 
