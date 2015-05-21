@@ -69,7 +69,7 @@ class TestSyncClient(unittest.TestCase):
 
         response = FakeReposne(
             http.client.BAD_REQUEST,
-            ujson.dumps({'message': 'Tenant not found'}))
+            ujson.dumps({'message': 'Data not found'}))
         self.mock_request.returns(response)
 
         with self.assertRaises(errors.ClientError):
