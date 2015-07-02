@@ -116,8 +116,8 @@ def dechunk(stream):
     :raise: DechunkError
     """
 
-    # TODO(vkuznet): Add support for chunk extensions:
-    # TODO(vkuznet): http://tools.ietf.org/html/rfc2616#section-3.6.1
+    # TODO(vovan): Add support for chunk extensions:
+    # TODO(vovan): http://tools.ietf.org/html/rfc2616#section-3.6.1
 
     while True:
         chunk_len = read_until(stream, b'\r\n')
