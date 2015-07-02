@@ -13,7 +13,7 @@ tests_require = install_requires + ['vmock',
 setup(
     name='httputil',
     packages=find_packages(),
-    version='0.6.2',
+    version='0.6.3',
     description='Various utilities to deal with HTTP stuff.',
     author='Vovan Kuznetsov',
     author_email='vovanec@gmail.com',
