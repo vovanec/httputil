@@ -52,6 +52,13 @@ class DeflateDecompressor(object):
         finally:
             self._first_chunk = False
 
+    def flush(self):
+        """All pending input is processed, and a string containing the
+         remaining compressed output is returned.
+        """
+
+        return self._decompressobj.flush()
+
 
 DECOMPRESSOR_FACTORIES = {
     DEFLATE: DeflateDecompressor,
