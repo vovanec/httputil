@@ -187,9 +187,8 @@ def decompress(chunks, compression):
     if compression not in SUPPORTED_COMPRESSIONS:
         raise TypeError('Unsupported compression type: %s' % (compression,))
 
+    de_compressor = DECOMPRESSOR_FACTORIES[compression]()
     try:
-        de_compressor = DECOMPRESSOR_FACTORIES[compression]()
-
         for chunk in chunks:
             try:
                 yield de_compressor.decompress(chunk)
@@ -197,7 +196,7 @@ def decompress(chunks, compression):
                 # BZ2Decompressor: invalid data stream
                 raise DecompressError(err) from None
 
-        # BZ2Decompressor does not support flush() interface.
+        # BZ2Decompressor does not support flush() method.
         if hasattr(de_compressor, 'flush'):
             yield de_compressor.flush()
 
