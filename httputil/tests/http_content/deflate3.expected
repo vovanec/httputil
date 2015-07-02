@@ -1,0 +1,418 @@
+<!DOCTYPE html><html
+dir="ltr" lang="en-US"><head><meta
+charset="UTF-8" /><meta
+name="viewport" content="width=device-width, initial-scale=1" /><link
+rel="stylesheet" type="text/css" href="http://www.cyberciti.biz/cms/wp-content/thesis/skins/classic-r/css.css" media="screen, projection" /><title>nixCraft &#8212; Linux Tips, Hacks, Tutorials, And Ideas In Blog</title><meta
+name="description" content="Linux Tips, Hacks, Tutorials, And Ideas In Blog" /><meta
+name="robots" content="noodp, noydir" /><link
+rel="canonical" href="http://www.cyberciti.biz" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft feed" href="http://www.cyberciti.biz/feed/" /><link
+rel="pingback" href="http://www.cyberciti.biz/cms/xmlrpc.php" /><link
+rel="shortcut icon" href="http://www.cyberciti.biz/cms/wp-content/themes/thesis/lib/images/favicon.ico" /><!--
+	generated 5637 seconds ago
+	generated in 0.158 seconds
+	served from batcache in 0.001 seconds
+	expires in 363 seconds
+-->
+</head><body
+class="template-home"><div
+class="container"><center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="4167943066"
+data-ad-format="auto"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center> <br/> <span
+class="menu_control">≡ Menu</span><ul
+id="menu-home" class="menu"><li
+id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-32"><a
+href="http://www.cyberciti.biz/topics/">Main Menu</a><ul
+class="sub-menu"><li
+id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a
+href="http://www.cyberciti.biz/topics/datacenter/">Datacenter</a></li><li
+id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a
+href="http://www.cyberciti.biz/topics/hardware/">Hardware</a></li><li
+id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a
+href="http://www.cyberciti.biz/topics/security/">IT / Linux Security</a></li><li
+id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"><a
+href="http://www.cyberciti.biz/topics/open-source/">Open source</a></li><li
+id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a
+href="http://www.cyberciti.biz/topics/reviews/">Reviews</a></li><li
+id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a
+href="http://www.cyberciti.biz/topics/storage/">Storage</a></li><li
+id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
+href="http://www.cyberciti.biz/topics/virtualization/">Virtualization</a></li><li
+id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33"><a
+href="http://www.cyberciti.biz/topics/cloud-computing/">Cloud Computing</a><ul
+class="sub-menu"><li
+id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a
+title="CDN " href="http://www.cyberciti.biz/topics/cloud-computing/content-delivery-network/">Content delivery network</a></li></ul></li><li
+id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/">Mobile</a><ul
+class="sub-menu"><li
+id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/android/">Android</a></li><li
+id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/ios/">iOS</a></li></ul></li><li
+id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a
+href="http://www.cyberciti.biz/topics/networking/">Networking</a></li><li
+id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-28"><a
+href="http://www.cyberciti.biz/#">Programming</a><ul
+class="sub-menu"><li
+id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a
+title="Linux Shell Scripting Tutorial" href="http://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting</a></li><li
+id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a
+title="Python programming  tutorials" href="http://www.cyberciti.biz/topics/python-tutorials/">Python</a></li></ul></li><li
+id="menu-item-377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a
+title="See all topics by Category or Month" href="http://www.cyberciti.biz/topics/">See all topics</a></li></ul></li><li
+id="menu-item-378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-378"><a
+title="Linux How-To Articles, Tips, and Guides" href="http://www.cyberciti.biz/faq/">Linux How-To &#038; Tutorials</a></li><li
+id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a
+title="About us" href="http://www.cyberciti.biz/tips/about-us">About</a></li><li
+id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a
+title="Email us " href="http://www.cyberciti.biz/tips/contact-us">Contact us</a></li><li
+id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a
+title="Various aspects of nixCraft can be monitored with RSS feeds." href="http://www.cyberciti.biz/nixcraft-rss-feed-syndication/">RSS/Feed</a></li></ul><div
+id="header" class="header"><h1 id="site_title"><a
+href="http://www.cyberciti.biz">nixCraft</a></h1><div
+id="site_tagline">Linux Tips, Hacks, Tutorials, And Ideas In Blog</div></div><div
+class="columns"><div
+class="content"><div
+id="post-561" class="post_box grt top" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/open-source/learning-bash-scripting-for-beginners/" rel="bookmark">Learning bash scripting for beginners</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2015-05-17" /><meta
+itemprop="dateModified" content="2015-05-20" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2015-05-17">May 17, 2015</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/command-line-hacks/" rel="category tag">Command Line Hacks</a>, <a
+href="http://www.cyberciti.biz/topics/howto/" rel="category tag">Howto</a>, <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">B</span>ash (Bourne-Again SHell) is a Linux and Unix-like system shell or command language interpreter. It is a default shell on many operating systems including Linux and Apple OS X.  If you have always used a graphic user interface like KDE or Gnome or MS-Windows or Apple OS X, you are likely to find bash shell confusing. If you spend some time with the bash shell prompt and it will be difficult for you to go back.<br
+/> <br/><br
+/> <img
+src="http://s0.cyberciti.org/uploads/cms/2015/05/learn-bash.jpg" alt="Learn bash" width="598" height="503" class="aligncenter size-full wp-image-562" /><br
+/> <br/><br
+/> Here are a list of tutorials and helpful resources to help you learn bash scripting and bash shell itself.</p></div><meta
+itemprop="interactionCount" content="UserComments:8" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/open-source/learning-bash-scripting-for-beginners/#comments" rel="nofollow"><span
+class="num_comments">8</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-536" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/howto/shell-primer-configuring-your-linux-unix-osx-environment/" rel="bookmark">A Shell Primer: Master Your Linux, OS X, Unix Shell Environment</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2015-01-23" /><meta
+itemprop="dateModified" content="2015-05-17" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2015-01-23">January 23, 2015</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/command-line-hacks/" rel="category tag">Command Line Hacks</a>, <a
+href="http://www.cyberciti.biz/topics/howto/" rel="category tag">Howto</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">O</span>n a Linux or Unix-like systems each user and process runs in a specific environment. An environment includes variables, settings, aliases, functions and more. Following is a very brief introduction to some useful shell environment commands, including examples of how to use each command and setup your own environment to increase productivity in the command prompt.</p></div><meta
+itemprop="interactionCount" content="UserComments:8" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/howto/shell-primer-configuring-your-linux-unix-osx-environment/#comments" rel="nofollow"><span
+class="num_comments">8</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-525" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/cloud-computing/7-awesome-open-source-cloud-storage-software-for-your-privacy-and-security/" rel="bookmark">7 Awesome Open Source Cloud Storage Software For Your Privacy and Security</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2015-01-14" /><meta
+itemprop="dateModified" content="2015-05-18" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2015-01-14">January 14, 2015</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/cloud-computing/" rel="category tag">Cloud Computing</a>, <a
+href="http://www.cyberciti.biz/topics/datacenter/" rel="category tag">Datacenter</a>, <a
+href="http://www.cyberciti.biz/topics/hardware/" rel="category tag">Hardware</a>, <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a>, <a
+href="http://www.cyberciti.biz/topics/storage/" rel="category tag">Storage</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">C</span>loud storage is nothing but an enterprise-level cloud data storage model to store the digital data in logical pools, across the multiple servers. You can use a hosting company such as Amazon, Google, Rackspace, Dropbox and others for keeping your data available and accessible 24x7. You can access data stored on cloud storage via API or desktop/mobile apps or web based systems. <br/></p><p>In this post, I'm going to list amazingly awesome open source cloud storage engines that you can use to access and sync your data privately for security and privacy reasons. <br/></p></div><meta
+itemprop="interactionCount" content="UserComments:19" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/cloud-computing/7-awesome-open-source-cloud-storage-software-for-your-privacy-and-security/#comments" rel="nofollow"><span
+class="num_comments">19</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-519" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/open-source/command-line-hacks/20-unix-command-line-tricks-part-i/" rel="bookmark">20 Unix Command Line Tricks &#8211; Part I</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2015-01-13" /><meta
+itemprop="dateModified" content="2015-06-25" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2015-01-13">January 13, 2015</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/command-line-hacks/" rel="category tag">Command Line Hacks</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">L</span>et us start new year with <strong>these Unix command line tricks</strong> to increase productivity at the Terminal. I have found them over the years and I'm now going to share with you.</p></div><meta
+itemprop="interactionCount" content="UserComments:10" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/open-source/command-line-hacks/20-unix-command-line-tricks-part-i/#comments" rel="nofollow"><span
+class="num_comments">10</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-511" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/open-source/awesome-backup-software-for-linux-unix-osx-windows-systems/" rel="bookmark">5 Awesome Open Source Backup Software For Linux and Unix-like Systems</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-11-06" /><meta
+itemprop="dateModified" content="2015-05-18" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-11-06">November 6, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">A</span> good backup plan is essential in order to have the ability to recover from</p><ul><li>Human errors</li><li>RAID or disk failure</li><li>File system corruption</li><li>Data center destruction and more.</li></ul><p>In this post I'm going to list amazingly awesome open source Backup software for you.</p><h2>What to look for when choosing backup software for an enterprise?</h2><p>Make sure the following features are supported backup software you deploy:</p></div><meta
+itemprop="interactionCount" content="UserComments:28" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/open-source/awesome-backup-software-for-linux-unix-osx-windows-systems/#comments" rel="nofollow"><span
+class="num_comments">28</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-487" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/" rel="bookmark">8 Tips to Solve Linux &#038; Unix Systems Hard Disk Problems Like Disk Full Or Can&#8217;t Write to the Disk</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-10-29" /><meta
+itemprop="dateModified" content="2014-12-09" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-10-29">October 29, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/datacenter/" rel="category tag">Datacenter</a>, <a
+href="http://www.cyberciti.biz/topics/hardware/" rel="category tag">Hardware</a>, <a
+href="http://www.cyberciti.biz/topics/storage/" rel="category tag">Storage</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">C</span>an't write to the hard disk on a Linux or Unix-like systems? Want to diagnose corrupt disk issues on a server? Want to find out why you are getting "disk full" messages on screen? Want to learn how to solve full/corrupt and failed disk issues. Try these eight tips to diagnose a Linux and Unix server hard disk drive problems.</p></div><meta
+itemprop="interactionCount" content="UserComments:7" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/#comments" rel="nofollow"><span
+class="num_comments">7</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-498" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/cloud-computing/use-vagrant-to-create-small-virtual-lab-on-linux-osx/" rel="bookmark">How To Use Vagrant To Create Small Virtual Test Lab on a Linux / OS X / MS-Windows</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-10-28" /><meta
+itemprop="dateModified" content="2014-10-28" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-10-28">October 28, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/cloud-computing/" rel="category tag">Cloud Computing</a>, <a
+href="http://www.cyberciti.biz/topics/virtualization/" rel="category tag">Virtualization</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">V</span>agrant is a multi-platform command line tool for creating lightweight, reproducible and portable virtual environments. Vagrant acts as a glue layer between different virtualization solutions (Software, hardware PaaS and IaaS) and different configuration management utilities (Puppet, Chef, etc'). Vagrant was started back at 2010 by Mitchell Hashimoto as a side project and later became one of the first products of HashiCorp - the company Mitchell founded.</p><p>While officially described as a tool for setting up development environments, Vagrant can be used for a lot of other purposes by non developers as well:</p><ul><li>Creating demo labs</li><li>Testing configuration management tools</li><li>Speeding up the work with non multi-platform tools such as Docker</li></ul><p>In this tutorial I'll show how can we take Vagrant as use it to create small virtual test lab which we will be able to pass to our colleagues.</p></div><meta
+itemprop="interactionCount" content="UserComments:8" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/cloud-computing/use-vagrant-to-create-small-virtual-lab-on-linux-osx/#comments" rel="nofollow"><span
+class="num_comments">8</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-491" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/open-source/howto-protect-linux-ssh-login-with-google-authenticator/" rel="bookmark">Secure Your Linux Desktop and SSH Login Using Two Factor Google Authenticator</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-10-01" /><meta
+itemprop="dateModified" content="2014-10-29" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-10-01">October 1, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a>, <a
+href="http://www.cyberciti.biz/topics/security/" rel="category tag">Security</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">T</span>wo factor authentication is increasingly becoming a strongly recommended way of protecting user accounts in web applications from attackers by requiring a second method of authentication in addition to the standard username and password pair.</p><p>Although two factor authentication can encompass a wide range of techniques like biometrics or smart cards, the most commonly deployed technique in web applications is the one time password. If you have used applications like Gmail, you are probably familiar with the one time password generated by the Google Authenticator app that's available on iOS or Android devices.</p><p>The algorithm used for the one time password in the Google Authenticator app is known as the Time-based One-Time Password (TOTP) algorithm. The TOTP algorithm is a standard algorithm approved by the IETF in <a
+target="_blank" href="http://tools.ietf.org/html/rfc6238">(RFC 6238) totp-rfc</a>.</p></div><meta
+itemprop="interactionCount" content="UserComments:15" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/open-source/howto-protect-linux-ssh-login-with-google-authenticator/#comments" rel="nofollow"><span
+class="num_comments">15</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-477" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/datacenter/5-awesome-open-source-cloning-software/" rel="bookmark">5 Awesome Open Source Cloning Software</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-08-22" /><meta
+itemprop="dateModified" content="2015-05-18" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-08-22">August 22, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/datacenter/" rel="category tag">Datacenter</a>, <a
+href="http://www.cyberciti.biz/topics/hardware/" rel="category tag">Hardware</a>, <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a>, <a
+href="http://www.cyberciti.biz/topics/storage/" rel="category tag">Storage</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">C</span>loning is nothing but the copying of the contents of a server hard disk to a storage medium (another disk) or to an image file. Disk cloning is quite useful in modern data centers for:</p><ol><li>Full system backup.</li><li>System recovery.</li><li>Reboot and restore.</li><li>Hard drive upgrade.</li><li>Converting a physical server to virtual machine and more.</li></ol><p>In this post, I'm going to list the Free and Open Source Software for Disk Imaging and Cloning that you can use for GNU/Linux, *BSD and Mac OS X desktop operating systems.</p></div><meta
+itemprop="interactionCount" content="UserComments:19" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/datacenter/5-awesome-open-source-cloning-software/#comments" rel="nofollow"><span
+class="num_comments">19</span> comments</a> <span
+class="bracket">}</span></div><div
+id="post-474" class="post_box grt" itemscope itemtype="http://schema.org/Article"><div
+class="headline_area"><h2 class="headline" itemprop="name"><a
+href="http://www.cyberciti.biz/python-tutorials/linux-tutorial-install-ansible-configuration-management-and-it-automation-tool/" rel="bookmark">Linux Tutorial: Install Ansible Configuration Management And IT Automation Tool</a></h2><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author" itemprop="author">Vivek Gite</span><meta
+itemprop="datePublished" content="2014-08-18" /><meta
+itemprop="dateModified" content="2014-10-01" /> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2014-08-18">August 18, 2014</span><div
+class="post_cats" itemprop="keywords"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/topics/datacenter/" rel="category tag">Datacenter</a>, <a
+href="http://www.cyberciti.biz/topics/hardware/" rel="category tag">Hardware</a>, <a
+href="http://www.cyberciti.biz/topics/open-source/" rel="category tag">Open Source</a>, <a
+href="http://www.cyberciti.biz/topics/python-tutorials/" rel="category tag">Python</a></div></div></div><div
+class="post_content post_excerpt" itemprop="description"><p><span
+class="drop_cap">T</span>oday I will be talking about ansible, a powerful configuration management solution written in python. There are many configuration management solutions available, all with pros and cons, ansible stands apart from many of them for its simplicity. What makes ansible different than many of the most popular configuration management systems is that its agent-less, no need to setup agents on every node you want to control. Plus, this has the benefit of being able to control you entire infrastructure from more than one place, if needed. That last point's validity, of being a benefit, may be debatable but I find it as a positive in most cases. Enough talk, lets get started with Ansible installation and configuration on a RHEL/CentOS, and Debian/Ubuntu based systems.</p></div><meta
+itemprop="interactionCount" content="UserComments:9" /> <span
+class="bracket">{</span> <a
+class="num_comments_link" href="http://www.cyberciti.biz/python-tutorials/linux-tutorial-install-ansible-configuration-management-and-it-automation-tool/#comments" rel="nofollow"><span
+class="num_comments">9</span> comments</a> <span
+class="bracket">}</span></div><div
+class="prev_next"> <span
+class="previous_posts"><a
+href="http://www.cyberciti.biz/page/2/" >Previous Posts</a></span></div></div><div
+class="sidebar"><div
+class="widget widget_text" id="text-15"><div
+class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="7895531150"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div
+class="widget search-form" id="thesis-search-widget-2"><form
+class="search_form" method="get" action="http://www.cyberciti.biz"><p> <input
+class="input_text" type="text" id="s" name="s" value="To search, type and hit enter" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" /> <input
+type="hidden" id="searchsubmit" value="Search" /></p></form></div><div
+class="widget widget_text" id="text-16"><div
+class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3521177162"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div
+class="widget widget_text" id="text-17"><p
+class="widget_title">Featured Articles:</p><div
+class="textwidget"><ul><li><a
+href="http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/">30 Cool Open Source Software I Discovered in 2013</a></li><li><a
+href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X</a></li><li><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html">25 PHP Security Best Practices For Sys Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html">Top 20 OpenSSH Server Best Security Practices </a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html">Top 20 Nginx WebServer Best Security Practices</a><li><A
+href="http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html">20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors</a><li><a
+href="http://www.cyberciti.biz/open-source/best-terminal-applications-for-linux-unix-macosx/">15 Greatest Open Source Terminal Applications Of 2012</a></li><li><a
+href="http://www.cyberciti.biz/tips/my-10-unix-command-line-mistakes.html">My 10 UNIX Command Line Mistakes</a></li><li><a
+href="http://www.cyberciti.biz/tips/open-source-project-management-software.html">Top 10 Open Source Web-Based Project Management Software</a></li><li><a
+href="http://www.cyberciti.biz/tips/download-email-client-for-linux-mac-osx-windows.html">Top 5 Email Client For Linux, Mac OS X, and Windows Users</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-laptop.html">The Novice Guide To Buying A Linux Laptop</a></li></ul></div></div><div
+class="widget widget_rss" id="rss-2"><p
+class="widget_title"><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/feed/'><img
+style='border:0' width='14' height='14' src='http://www.cyberciti.biz/cms/wp-includes/images/rss.png' alt='RSS' /></a> <a
+class='rsswidget' href='http://www.cyberciti.biz/faq'>Linux Howtos and Tutorials</a></p><ul><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/debian-ubuntu-restricting-ssh-user-session-to-a-directory-chrooted-jail/'>Debian/Ubuntu Linux: Restrict an SSH user session to a specific directory by setting chrooted jail</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/'>SSH ProxyCommand example: Going through one host to reach another server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-disconnect-from-lxc-console-ctrl-q-a-shortcut/'>Linux exit from lxc-console keyboard shortcut</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-running-sudo-command-without-a-password/'>How to run sudo command without a password on a Linux or Unix</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/cve-2015-3456-patch-venom-on-debian-ubuntu-fedora-centos-rhel-linux/'>How To Patch and Protect Linux Server Against the VENOM Vulnerability # CVE-2015-3456</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-install-gnome-gui-desktop-on-centos-rhel-7-server/'>How To CentOS / RHEL 7 Install Gnome Desktop Using Yum</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-osx-bsd-ssh-multiplexing-to-speed-up-ssh-connections/'>Linux/Unix: OpenSSH Multiplexer To Speed Up OpenSSH Connections</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/'>RHEL / Centos Linux 7: Change and Set Hostname Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-yum-downgrade-packages-on-rhel-centos-fedora-scientific-linux/'>CentOS/RHEL Use yum Command To Downgrade or Rollback Updates</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-block-internet-explorer-browser-with-squid-proxy-server-on-a-linuxunix-server/'>HowTo Block Internet Explorer Browser With Squid Proxy Server on a Linux/Unix Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/unable-to-use-ping-in-centos-linux-rhel-7-docker-container/'>RHEL / CentOS Linux 7 Enable Ping Access In Docker Container</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/debian-ubuntu-linux-auto-mounting-windows-ntfs-file-system/'>HowTo Debian/Ubuntu Linux Auto Mount Windows NTFS File System [ntfs-3g]</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-find-package-includes-a-fixpatch-via-cve-number/'>Debian/Ubuntu Linux: Find If Installed Package Includes a Fix/Patch Via CVE Number</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-openssl-security-update-cve20150291-cve20150204-cve20150290-cve20150207-cve20150286/'>How To Patch and Protect OpenSSL Vulnerability # CVE-2015-0291 CVE-2015-0204  [ 19/March/2015 ]</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-mount-remote-directory-filesystems-with-sshfs-on-linux/'>How To Mount Remote Directory With SSHFS on a Linux</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/freebsd-unix-find-the-process-pid-listening-on-a-certain-port-commands/'>FreeBSD Unix Find Out Which Programs Are Listing On a Given Port Number</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-modify-partition-labels-command-to-change-diskname/'>Linux Change Disk Label Name on EXT2 / EXT3 / EXT4 File Systems</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/use-ssh-copy-id-with-an-openssh-server-listing-on-a-different-port/'>Use ssh-copy-id with an OpenSSH Server Listening On a Different Port</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/ubuntu-linux-editing-files-with-administrator-privileges/'>Ubuntu Linux: Edit and Open Files That Require Administrator Privileges</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-install-memcached-on-ubuntu-linux-1204-1404/'>Ubuntu Linux 12.04/14.04 LTS Install Memcached Server For Python and PHP Apps</a></li></ul></div></div></div><div
+class="footer"> &copy;2000-2015 nixCraft. All rights reserved. <a
+href="/tips/privacy">Privacy Policy</a> - <a
+href="/tips/disclaimer">Terms of Service</a> - <a
+href="/tips/contact-us">Questions or Comments</a><br/> The content is <a
+href="/tips/copyright">copyrighted to nixCraft</a> and may not be reproduced on other websites.</div></div> <script type="text/javascript">// 
+        var disqus_shortname = 'cyberciti';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        //</script><script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script src="http://www.cyberciti.biz/mint/?js" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-108650-1']);
+  _gaq.push(['_setDomainName', 'www.cyberciti.biz']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

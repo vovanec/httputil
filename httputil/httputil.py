@@ -18,8 +18,42 @@ DEFLATE = 'deflate'
 BZIP2 = 'bzip2'
 SUPPORTED_COMPRESSIONS = {GZIP, DEFLATE, BZIP2}
 
+
+class DeflateDecompressor(object):
+    """Decompress deflate data.
+    """
+
+    def __init__(self):
+
+        self._decompressor = zlib.decompressobj()
+        self._use_fallback = False
+
+    def decompress(self, chunk):
+        """Decompress the chunk of data.
+
+        :param bytes chunk: data chunk
+
+        :rtype: bytes
+        """
+
+        try:
+            return self._decompressor.decompress(chunk)
+        except zlib.error:
+            # ugly hack to work with raw deflate content that may
+            # be sent by microsoft servers. For more information, see:
+            # http://carsten.codimi.de/gzip.yaws/
+            # http://www.port80software.com/200ok/archive/2005/10/31/868.aspx
+            # http://www.gzip.org/zlib/zlib_faq.html#faq38
+            if not self._use_fallback:
+                self._use_fallback = True
+                self._decompressor = zlib.decompressobj(-zlib.MAX_WBITS)
+                return self._decompressor.decompress(chunk)
+
+            raise
+
+
 DECOMPRESSOR_FACTORIES = {
-    DEFLATE: functools.partial(zlib.decompressobj, -zlib.MAX_WBITS),
+    DEFLATE: DeflateDecompressor,
     GZIP: functools.partial(zlib.decompressobj, 16 + zlib.MAX_WBITS),
     BZIP2: bz2.BZ2Decompressor
 }

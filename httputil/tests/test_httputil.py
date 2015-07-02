@@ -21,6 +21,8 @@ CONTENT_FILES = [
     ('chunked_gzipped', True, httputil.GZIP),
     ('chunked', True, None),
     ('deflate', False, httputil.DEFLATE),
+    ('deflate2', False, httputil.DEFLATE),
+    ('deflate3', False, httputil.DEFLATE),
     ('gzipped', False, httputil.GZIP)
 ]
 
