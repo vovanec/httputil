@@ -3,6 +3,7 @@
 __author__ = 'vovanec@gmail.com'
 
 import logging
+from urllib.parse import urljoin
 
 
 class BaseRequestEngine(object):
@@ -56,7 +57,7 @@ class BaseRequestEngine(object):
 
         """
 
-        url = self._api_base_url + url
+        url = urljoin(self._api_base_url, url)
         self._log.debug('Performing %s request to %s', method, url)
 
         return self._request(url, method=method, headers=headers, data=data,
