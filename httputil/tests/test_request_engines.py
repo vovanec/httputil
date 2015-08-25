@@ -10,6 +10,7 @@ import http.client
 import unittest
 import vmock
 import vmock.matchers
+from urllib.parse import urljoin
 
 import requests.exceptions
 import requests.models
@@ -25,9 +26,11 @@ from httputil.request_engines import sync
 
 CURL_ERROR = 599
 BASE_URL = 'http://api.com'
+CONNECT_TIMEOUT = 3
+REQUEST_TIMEOUT = 3
 
 
-class FakeReposne(object):
+class FakeResponse(object):
 
     """Fake requests.Response."""
 
@@ -45,47 +48,71 @@ class TestSyncClient(unittest.TestCase):
 
         self.mock = vmock.VMock()
         self.addCleanup(self.mock.tear_down)
+
         self.mock_request = self.mock.stub_method(
-            requests.Session, 'request')(vmock.matchers.any_args())
-        self._engine = sync.SyncRequestEngine(BASE_URL, 3, 3, None)
+            requests.Session, 'request')
+        self.request_kwargs = {
+            'verify': True, 'auth': None, 'cert': None, 'data': None,
+            'timeout': REQUEST_TIMEOUT, 'headers': None}
+        self._engine = sync.SyncRequestEngine(BASE_URL, CONNECT_TIMEOUT,
+                                              REQUEST_TIMEOUT, None)
 
     def test_ok(self):
 
         expected = {'status': 'ok'}
-        response = FakeReposne(http.client.OK, json.dumps(expected))
+        response = FakeResponse(http.client.OK, json.dumps(expected))
 
-        self.mock_request.returns(response)
+        self.mock_request('GET', urljoin(BASE_URL, '/blah'),
+                          **self.request_kwargs).returns(response)
+
         self.assertDictEqual(
             self._engine.request('/blah', result_callback=json.loads), expected)
 
+    def test_with_headers(self):
+
+        expected = {'status': 'ok'}
+        response = FakeResponse(http.client.OK, json.dumps(expected))
+
+        headers = {'Content-Type': 'application/json'}
+        self.request_kwargs['headers'] = headers
+        self.mock_request('GET', urljoin(BASE_URL, '/blah'),
+                          **self.request_kwargs).returns(response)
+
+        self.assertDictEqual(
+            self._engine.request('/blah', result_callback=json.loads,
+                                 headers=headers), expected)
+
     def test_malformed_response(self):
 
-        response = FakeReposne(http.client.OK, '--Not JSON--')
-        self.mock_request.returns(response)
-
+        response = FakeResponse(http.client.OK, '--Not JSON--')
+        self.mock_request('GET', urljoin(BASE_URL, '/blah'),
+                          **self.request_kwargs).returns(response)
         with self.assertRaises(errors.MalformedResponse):
             self._engine.request('/blah', result_callback=json.loads)
 
     def test_http_client_error(self):
 
-        response = FakeReposne(
+        response = FakeResponse(
             http.client.BAD_REQUEST,
             json.dumps({'message': 'Data not found'}))
-        self.mock_request.returns(response)
+        self.mock_request('GET', urljoin(BASE_URL, '/blah'),
+                          **self.request_kwargs).returns(response)
 
         with self.assertRaises(errors.ClientError):
             self._engine.request('/blah', result_callback=json.loads)
 
     def test_http_server_error(self):
 
-        response = FakeReposne(http.client.SERVICE_UNAVAILABLE)
-        self.mock_request.returns(response)
+        response = FakeResponse(http.client.SERVICE_UNAVAILABLE)
+        self.mock_request('GET', urljoin(BASE_URL, '/blah'),
+                          **self.request_kwargs).returns(response)
 
         with self.assertRaises(errors.ServerError):
             self._engine.request('/blah', result_callback=json.loads)
 
     def test_communication_error(self):
 
+        self.mock_request = self.mock_request(vmock.matchers.any_args())
         self.mock_request.raises(
             requests.exceptions.RequestException('No route to host'))
 

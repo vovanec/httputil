@@ -86,6 +86,7 @@ class SyncRequestEngine(BaseRequestEngine):
                 response = s.request(method, url, data=data,
                                      timeout=self._connect_timeout,
                                      cert=cert,
+                                     headers=headers,
                                      verify=verify,
                                      auth=auth)
                 """:type: requests.models.Response
