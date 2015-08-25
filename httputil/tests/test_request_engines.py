@@ -51,8 +51,9 @@ class TestSyncClient(unittest.TestCase):
 
         self.mock_request = self.mock.stub_method(
             requests.Session, 'request')
-        self.request_kwargs = {'verify': True, 'auth': None, 'cert': None,
-                               'data': None, 'timeout': 3, 'headers': None}
+        self.request_kwargs = {
+            'verify': True, 'auth': None, 'cert': None, 'data': None,
+            'timeout': REQUEST_TIMEOUT, 'headers': None}
         self._engine = sync.SyncRequestEngine(BASE_URL, CONNECT_TIMEOUT,
                                               REQUEST_TIMEOUT, None)
 
