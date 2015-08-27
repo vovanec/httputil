@@ -20,12 +20,13 @@ import tornado.httpclient
 import tornado.curl_httpclient
 
 from httputil.request_engines import async
+from httputil.request_engines import base
 from httputil.request_engines import errors
 from httputil.request_engines import sync
 
 
 CURL_ERROR = 599
-BASE_URL = 'http://api.com'
+BASE_URL = 'http://api.com/'
 CONNECT_TIMEOUT = 3
 REQUEST_TIMEOUT = 3
 
@@ -38,6 +39,22 @@ class FakeResponse(object):
 
         self.status_code = status_code
         self.content = content
+
+
+class TestMakeURL(unittest.TestCase):
+
+    def test1(self):
+
+        expected_full_url = 'http://api/v1/get_customers'
+
+        for base_url, rel_url in [('http://api/v1/', 'get_customers'),
+                                  ('http://api/v1/', '/get_customers'),
+                                  ('http://api/v1', '/get_customers'),
+                                  ('http://api/v1', 'get_customers')]:
+
+            self._engine = base.BaseRequestEngine(base_url, 0, 0, 0)
+            self.assertEqual(
+                self._engine._make_full_url(rel_url), expected_full_url)
 
 
 class TestSyncClient(unittest.TestCase):

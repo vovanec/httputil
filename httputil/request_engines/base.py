@@ -3,7 +3,9 @@
 __author__ = 'vovanec@gmail.com'
 
 import logging
-from urllib.parse import urljoin
+
+
+SLASH = '/'
 
 
 class BaseRequestEngine(object):
@@ -31,7 +33,7 @@ class BaseRequestEngine(object):
 
         self._connect_timeout = connect_timeout
         self._request_timeout = request_timeout
-        self._api_base_url = api_base_url.rstrip('/')
+        self._api_base_url = api_base_url.rstrip(SLASH)
         self._username = username
         self._password = password
         self._conn_retries = conn_retries
@@ -54,12 +56,11 @@ class BaseRequestEngine(object):
 
         :rtype: dict
         :raise: APIError
-
         """
 
-        url = urljoin(self._api_base_url, url)
-        self._log.debug('Performing %s request to %s', method, url)
+        url = self._make_full_url(url)
 
+        self._log.debug('Performing %s request to %s', method, url)
         return self._request(url, method=method, headers=headers, data=data,
                              result_callback=result_callback)
 
@@ -79,3 +80,14 @@ class BaseRequestEngine(object):
         """
 
         raise NotImplementedError
+
+    def _make_full_url(self, url):
+        """Given base and relative URL, construct the full URL.
+
+        :param str url: relative URL.
+
+        :return: full URL.
+        :rtype: str
+        """
+
+        return SLASH.join([self._api_base_url, url.lstrip(SLASH)])
