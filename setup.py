@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-install_requires = ['tornado==4.1',
+install_requires = ['tornado==6.3.2',
                     'requests']
 
 
